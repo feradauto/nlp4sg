@@ -1,3 +1,12 @@
+# data
+/data
+/outputs
+sg_classifier/data_modeling/wandb/
+sg_classifier/data_modeling/model2/
+ #notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+**/*.ipynb_checkpoints/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
