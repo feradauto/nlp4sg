@@ -1,0 +1,164 @@
+Most Related SG goal,(if exists) 2nd Related SG Goal,Q3 Answer from 80 responses
+health,industry_innovation_infrastructure,"Allowing computers to become our “smart” assistants. Wouldn’t it be nice to talk to a smart phone tree instead of the ones we have now? This can serve both personal and commercial needs, and is much cheaper than hiring people."
+health,,Analysis of unstructured clinical text to discover new medical knowledge
+social_equality,,Anti-racism
+peace_justice_and_strong_institutions,,Any application that is pursued with the goal of social good must be grounded in work with the affected communities and preferably begin from the articulated needs of those communities.
+education,health,Applications for improving education and health.
+poverty,,Applications for reducing poverty.
+health,,"applications in the medical/healthcare domain (clinician support using information retrieval, e.g.)"
+social_equality,gender_equality,"Applications related to making valid information and new technology accessible to marginalized groups. Topics that encourage simple approaches to solve a task, not the huge models that can only be used/explored by a small fragment of the worldwide population."
+social_equality,,assistive devices
+social_equality,,"Automatic Speech Recognition: Many uses, including again support for blind users"
+peace_justice_and_strong_institutions,,Better analysis tools for the detection of societal issues from social and traditional media
+social_equality,,"better documentation and understand of our datasets and models, including bias"
+decent_work_and_economy,industry_innovation_infrastructure,Better information retrieval
+decent_work_and_economy,industry_innovation_infrastructure,Better question-answering
+social_equality,gender_equality,bias
+social_equality,gender_equality,"bias (gender, racist, algorithmic)"
+social_equality,gender_equality,Bias and fairness
+social_equality,,Bringing diverse linguistics groups and communities on a common cognitive platform.
+social_equality,,"Building research tools accessible in different languages, regardless of how resource poor they might be."
+industry_innovation_infrastructure,social_equality,Building sustainable models that are accessible to the wider research community
+others,,caption generation: can similarly aid in communication by providing captions for images
+climate,,Climate change
+others,,collaborating with social scientists who can provide stronger context for our applications
+disinformation_and_fake_news,,Combating misinformation
+peace_justice_and_strong_institutions,,Computational Social Science: Helping answer questions involving finding patterns in data
+health,,"Conversational agents that are not only accurate, but also care about people's feelings"
+social_equality,,"Conversational AI: I am aware that some of them is developed for the disabled. Also, task oriented dialogue system is helpful to build system that can help people complete tasks, which could be a great help for blind people."
+decent_work_and_economy,industry_innovation_infrastructure,Coreference
+social_equality,others_interpretability,"correctly documenting data, estimating and documenting potential harms of the technology (where it doesn't work) while reporting research, focusing on underserved users."
+peace_justice_and_strong_institutions,privacy_protection,Counter-surveillance
+social_equality,gender_equality,De-bais
+social_equality,gender_equality,debiasing or acknowledging the bias in nlp applications
+social_equality,,Democratizing NLP: via translation and involving younger cohorts
+others_interpretability,,Demystifying NLP/AI: increasing the awareness of NLP and AI in general thereby increasing people's trust in our technology with a more adjusted set of expectations
+peace_justice_and_strong_institutions,,Depolarisation Of online content
+disinformation_and_fake_news,,Detection of disinformation and misinformation
+decent_work_and_economy,industry_innovation_infrastructure,Development of reliable conversational AI
+health,,dialogue generation and understanding: can aid in applications with social impact like encouraging empathetic dialogues on mental health platforms
+hate_speech,,differentiating hate speech from freedom of speech
+peace_justice_and_strong_institutions,,Disaster / emergency situations
+health,,"Early detection of mental health issues, e.g. suicide crisis"
+education,,Education
+education,,education
+education,,education
+education,,"Education support by NLP technology, whose importance is drastically increasing in the online learning era due to the pandemic"
+education,,Educational resources: For students in schools
+climate,responsible_consumption_and_production,"Efficiency of inference, particularly energy (often overlooked because it's fast, but at scale this may have larger impact than training)"
+climate,responsible_consumption_and_production,"Efficiency of model training, particularly energy"
+health,,Emotional and mental health support
+industry_innovation_infrastructure,,Enhancing science
+social_equality,,Equitable access
+decent_work_and_economy,industry_innovation_infrastructure,Essential for development of man/machine collaboration.
+peace_justice_and_strong_institutions,,ethics
+others_interpretability,,Explainability: with larger models it is key that we can better understand the reason the model predicts something
+partnership,industry_innovation_infrastructure,facilitating meaningful conversations
+disinformation_and_fake_news,,Fact check on the published news and scientific claims.
+social_equality,peace_justice_and_strong_institutions,fair information
+disinformation_and_fake_news,,Fake news and misinformation Detection
+health,peace_justice_and_strong_institutions,Generating uplifting/inspiring content
+climate,energy,green NLP
+hate_speech,,Hate speech detection
+health,,health care
+health,,health insurance
+health,,healthcare
+peace_justice_and_strong_institutions,,"Help the social media users to listen widely and think criticaly. Nowadays because of the recommondation algorithms, social media users are locked in echo chambers and become more and more polarized. Besides,  the huge amount of information makes the readers less willing to think by themselves."
+social_equality,,Helping minority groups
+partnership,peace_justice_and_strong_institutions,helping people get to know each other at a deeper level: highlighting similarities between people biographical data
+social_equality,,"How to help disables, especially who are lack of language ability to understand the language better, and communicate with common persons, and be connected to the world"
+peace_justice_and_strong_institutions,social_equality,How to mitigate cultures conflicts and bias.
+social_equality,gender_equality,identification and mitigation of biases
+disinformation_and_fake_news,,"identifying hate/ fake news on online media platforms (social, news etc.)"
+health,,"Improve/remove bureaucracy within health services (letters for appointments lost, emails never replied to, gatekeeping by receptionists etc)"
+others,,"In general, we need to actually deploy these application to the community that matters, not just publish a paper at an ACL conference. I don't see us having that much of an actual impact with our applications (in my opinion)."
+social_equality,,Income inequality
+social_equality,peace_justice_and_strong_institutions,Integration of cultural awareness
+social_equality,gender_equality,Integration of socio-demographic awareness for fairer tools
+others_interpretability,,interpretability
+others_interpretability,,Interpretable models
+social_equality,education,knowledge dissemination
+others,,language documentation
+industry_innovation_infrastructure,,Language Generation
+education,,language learning
+social_equality,,language revitalization
+education,,Language teaching
+health,,loneliness
+others,,"Low resource NLP: A majority of NLP research is in english. There are about 1B L1 and L2 speakers of English, meaning only 12.5% of the population speaks english. Focussing on english creates NLP systems that can only be used by 12.5% of the population."
+others,,low-resource Language modelling and other NLP task
+others,,machine translation
+others,,machine translation for low-source language
+others,,Machine Translation from high-use languages (English/Chinese/Spanish) to low use indigenous languages
+partnership,,machine translation: aiding in communication across language barriers
+partnership,,Machine Translation: Allowing people to communicate more easily
+others,,"Making language technologies inclusive for all, i.e. working on low-resource languages."
+health,,Medical and clinical settings.
+disinformation_and_fake_news,,misinformation
+disinformation_and_fake_news,,misinformation
+disinformation_and_fake_news,,"misinformation, fake news"
+social_equality,gender_equality,Mitigating bias
+others,,More inclusive language technology development
+industry_innovation_infrastructure,,multilingual systems that support NLP applications for non-English people
+peace_justice_and_strong_institutions,,"New approaches in social science, humanities"
+health,,NLP can play a role in systems that try to help people connect with each other and reduce loneliness
+industry_innovation_infrastructure,,NLP encouraging and stimulating human creativity
+others,,"NLP for documenting, preserving, and revitalizing endangered languages"
+education,,NLP for Education
+education,,"NLP for education (e.g., conversational agents that can teach children language?)"
+social_equality,,NLP for Empowering Underrepresented Communities
+education,,NLP for improving language acquisition
+disinformation_and_fake_news,,NLP for investigative journalism: tracking the spread of (mis)information and groups financing that spread
+health,,NLP for Mental Health Disorder Patients
+education,,NLP for News Literacy Education
+peace_justice_and_strong_institutions,,NLP for nonprofits & NGOs (e.g information support chatbots): resources for low-resourced languages & communities
+social_equality,,NLP for nonprofits & NGOs (e.g information support chatbots): global problems such as climate change
+privacy_protection,,"NLP for privacy protection: helping people understand legal agreements, track where their data goes and what it is used for, and withdraw consent"
+industry_innovation_infrastructure,decent_work_and_economy,NLP for programming: It is essentially helping people to translate natural utterance into programs. There is no bias or discrimination through the process.
+others,,NLP for resource-poor language
+hate_speech,,online abuse
+others,,"Our standard technologies (machine translation, event detection, coreference, etc) for low-resource languages to enhance technologies like search, speech recognition, etc for mobile devices."
+education,,"Perhaps can offer some insights into cognitive psychology, human language learning, etc"
+privacy_protection,,Privacy
+privacy_protection,,privacy preservation
+disinformation_and_fake_news,,propaganda/fake news detection
+peace_justice_and_strong_institutions,,providing recommendations for ethical deployment of large language models
+peace,,"public services: for example, filter the email to government, detect the emergence event on twitter, help service for 24h (at train station, airport)"
+hate_speech,social_equality,"racism, microaggressions, toxicity"
+poverty,,Redistribution
+decent_work_and_economy,industry_innovation_infrastructure,reduce the burden of simple brain labor
+decent_work_and_economy,industry_innovation_infrastructure,Relation Extraction
+others,,Research on non-English languages
+climate,,Save the energy
+others,,Save the world cultural heritage
+education,,Second language learning
+privacy_protection,,security
+social_equality,,sign language understanding/generation
+deception_detection,,Spam and Phishing Detection: Helping people avoid scams
+social_equality,gender_equality,Steering clear of applications which have potential negative impact on certain demographic communities
+social_equality,gender_equality,stereotypes against minorities
+social_equality,gender_equality,studying social bias
+education,,stylistic rewriting: text simplification or rewriting for different grade levels
+hate_speech,,stylistic rewriting: toxic language mitigation
+health,,Suicidal Ideation Detection In social media/ forums
+disinformation_and_fake_news,,"Supporting democracy (e.g. dealing with fake news, fact checking)"
+social_equality,gender_equality,Supporting minority and under-represented communities
+peace_justice_and_strong_institutions,,Supporting social movements for equity by providing language processing infrastructure (like identifying news that may be relevant to the movement)
+others,,Taking into consideration diverse perspectives in building datasets
+peace_justice_and_strong_institutions,,"text analysis for humanitarian organizations (e.g. in crisis like hurricanes, floods, etc.)"
+hate_speech,,text classification: hate speech and offensive language detection for applications like online moderation
+disinformation_and_fake_news,,text classification: misinformation detection for applications like online moderation
+education,social_equality,Text Simplification
+social_equality,,Text-to-Speech: Improving accessibility for blind users
+others,,"The risks of techno solutionism, risks of using NLP for tasks without domain expertise"
+health,,Therapist chatbot
+social_equality,,there could be more work on sign languages
+social_equality,,Tools to serve minority languages and speech-impaired
+education,,Tutoring
+social_equality,gender_equality,Understanding bias and how it affect nlp applications
+hate_speech,,"understanding longer-context dialogues (for example, understanding how toxic behavior develops or affects communities over multiple conversational threads)"
+peace_justice_and_strong_institutions,,understanding opinions toward major issues (e.g. climate change) and providing useful tools or information for concerned citizens and legislators to take action
+peace_justice_and_strong_institutions,,"Understanding pro-social behavior in online settings, such as peer-to-peer support"
+education,,Various other educational applications
+poverty,decent_work_and_economy,"Wealth redistribution.  NLP companies should be forced to develop technology in each of the contries they operate and have employees from those countries that understand the social impact of the technology. Each branch in each country shoud be independent from other branches, avoiding monopolies."
+industry_innovation_infrastructure,,Web Search: Helping people find information in new ways.
+industry_innovation_infrastructure,,"with machine translation methods, some knowledge can be shared with many more people in the world. In addition, clever interfaces to knowledge sources and help people satisfy their information needs faster"
