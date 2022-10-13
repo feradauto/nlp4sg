@@ -1,4 +1,4 @@
-# "How Is NLP Addressing the 17 UN Sustainability Goals? A Challenge Set of Social Good Paper Classification and Information Extraction"
+# How Is NLP Addressing the 17 UN Sustainability Goals? A Challenge Set of Social Good Paper Classification and Information Extraction
 
 This is the repo for: "How Is NLP Addressing the 17 UN Sustainability Goals? A Challenge Set of Social Good Paper Classification and Information Extraction"
 
@@ -6,9 +6,7 @@ The NLP4SG dataset can be found [here](https://github.com/feradauto/nlp4sg_resea
 
 The NLP4SG binary classification model can be found [here](https://drive.google.com/file/d/1fWEwmXCKFKW_RMcw1bFixSurpaU72upy/view?usp=sharing)
 
-## Instructions to run the models
-
-### General installation instructions
+## General installation instructions
 
 1. `conda create -n nlp4sg python=3.7`
 2. `conda activate nlp4sg`
