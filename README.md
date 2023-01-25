@@ -1,11 +1,11 @@
 # Beyond Good Intentions: Reporting the Research Landscape of NLP for Social Good
 
 
-For reproduction of the models place the "data", "dataset" and "outputs" folders in this directory__
+For reproduction of the models place the "data", "dataset" and "outputs" folders in this directory_
 
-"sg_classifier" folder corresponds to the code for the dataset creation and the task 1__
-"sg_match" folder" corresponds to the code for the models of task 2__
-"sg_information_extraction" folder corresponds to the code for the models of task 3__
+"sg_classifier" folder corresponds to the code for the dataset creation and the task_
+"sg_match" folder" corresponds to the code for the models of task 2_
+"sg_information_extraction" folder corresponds to the code for the models of task 3_
 
 
 ## General installation instructions
