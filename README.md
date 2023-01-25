@@ -1,10 +1,12 @@
-# How Is NLP Addressing the 17 UN Sustainability Goals? A Challenge Set of Social Good Paper Classification and Information Extraction
+# Beyond Good Intentions: Reporting the Research Landscape of NLP for Social Good
 
-This is the repo for: "How Is NLP Addressing the 17 UN Sustainability Goals? A Challenge Set of Social Good Paper Classification and Information Extraction"
 
-The NLP4SG dataset can be found [here](https://github.com/feradauto/nlp4sg_research_tracking/tree/main/dataset)
+For reproduction of the models place the "data", "dataset" and "outputs" folders in this directory
 
-The NLP4SG binary classification model can be found [here](https://drive.google.com/file/d/1fWEwmXCKFKW_RMcw1bFixSurpaU72upy/view?usp=sharing)
+"sg_classifier" folder corresponds to the code for the dataset creation and the task 1
+"sg_match" folder" corresponds to the code for the models of task 2
+"sg_information_extraction" folder corresponds to the code for the models of task 3
+
 
 ## General installation instructions
 

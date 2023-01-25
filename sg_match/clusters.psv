@@ -1,0 +1,1537 @@
+word|occurrences|center
+Cluster name: ||semeval
+semeval 2020 | 9|
+semeval 2017 | 2|
+semeval 2018 | 1|
+semeval 2020 task | 14|
+semeval 2021 task | 12|
+semeval 2019 task | 1|
+Cluster name: ||sentiment analysis
+emotion recognition | 65|
+emotion detection | 54|
+emotion analysis | 21|
+contextual emotion detection | 18|
+emotion classification | 16|
+emotion | 7|
+sentiment analysis | 141|
+sentiment classification | 20|
+sentiment | 12|
+sentiment analysis task | 7|
+aspect based sentiment analysis | 9|
+multimodal sentiment analysis | 6|
+sentiment prediction | 4|
+dimensional sentiment analysis | 5|
+sentiment detection | 4|
+sentiment analysis models | 6|
+sentiment analysis systems | 4|
+sentiment classifier | 3|
+Cluster name: ||part of speech
+pos | 31|
+part of speech tagging | 25|
+joint pos tagging | 2|
+pos tagging | 15|
+part of speech | 23|
+pos tagger | 6|
+pos taggers | 6|
+Cluster name: || machine translation
+machine translation | 280|
+translation | 273|
+neural mt | 6|
+multilingual nmt | 6|
+statistical mt | 5|
+phrasebased smt | 1|
+phrasebased statistical machine translation | 1|
+mt service | 3|
+neural machine translation | 87|
+statistical machine translation | 39|
+mt | 129|
+nmt | 73|
+umt | 2|
+mnmt | 3|
+nmt) | 2|
+unmt systems | 2|
+lowresource nmt | 2|
+wmt19 | 2|
+wmt | 2|
+translating | 7|
+machine translation research | 7|
+smt | 27|
+mt workflow | 2|
+mt) | 5|
+unmt | 3|
+machine translators | 2|
+patent machine translation | 2|
+machine translation of low resource languages | 2|
+machine translation techniques | 2|
+low resourced machine translation | 2|
+machine translation services | 2|
+machine translation engines | 2|
+machine translation based methods | 2|
+neural machine translation model | 2|
+online machine translation services | 2|
+multilingual neural machine translation model | 2|
+multimodal neural machine translation | 2|
+supervised neural machine translation | 2|
+phrase based machine translation | 3|
+machine translation approach | 3|
+machine translation model | 3|
+machine translations | 3|
+neural machine translation approach | 3|
+open machine translation | 4|
+machine translation technology | 4|
+machine translation methods | 4|
+multilingual machine translation | 4|
+multimodal machine translation | 4|
+neural machine translation systems | 5|
+neural machine translation models | 5|
+mt systems | 19|
+machine translation task | 2|
+translation process | 13|
+translation models | 18|
+machine translation? | 2|
+ai lab machine translation systems | 2|
+cross modal machine translation problem | 2|
+sign language machine translation | 2|
+online machine translation | 2|
+cherokee english machine translation demo | 2|
+example based machine translation | 5|
+machine translation models | 6|
+neural machine translation system | 8|
+unsupervised machine translation | 11|
+multilingual neural machine translation | 12|
+machine translation system | 19|
+translation system | 13|
+statistical machine translation system | 3|
+translation engine | 3|
+mt system | 7|
+smt system | 2|
+machine translation systems | 37|
+translation systems | 7|
+nmt model | 6|
+nmt models | 3|
+smt systems | 7|
+mt models | 6|
+mt technology | 4|
+Cluster name: || convolutional neural network
+convolutional neural network | 44|
+convolutional neural networks | 39|
+convolutional neural network model | 2|
+convolutional neural network models | 2|
+convolution neural network | 5|
+cnn | 32|
+cnns | 19|
+textcnn | 3|
+cnn model | 6|
+character cnn module | 2|
+Cluster name: || deep neural network
+deep neural networks | 49|
+deep neural network | 12|
+deep neural network models | 4|
+deep neural network architecture | 2|
+deep learning | 104|
+deep neural network architectures | 2|
+deep learning methods | 38|
+deep learning models | 69|
+deep learning method | 3|
+deep learning systems | 4|
+deep learning framework | 5|
+deep learning classifiers | 2|
+machine learning and deep learning methods | 2|
+deep learning model | 19|
+deep learning techniques | 16|
+deep learning approach | 16|
+deep learning architecture | 16|
+deep learning architectures | 11|
+deep learning algorithms | 7|
+deep learning approaches | 9|
+Cluster name: || character level neural network
+character level neural network | 2|
+Cluster name: || neural network
+neural networks | 64|
+neural network | 36|
+neural network models | 29|
+neural network based methods | 2|
+neural network architectures | 4|
+neural network methods | 4|
+neural network model | 28|
+neural network based approach | 4|
+end to end neural network models | 2|
+Cluster name: || neural models
+neural model | 27|
+neural architecture | 25|
+neural architectures | 16|
+neural approaches | 11|
+neural approach | 9|
+neural models | 53|
+Cluster name: || recurrent neural networks
+recurrent neural networks | 39|
+recurrent neural network | 20|
+rnn | 11|
+rnns | 9|
+rnn model | 3|
+rnn models | 3|
+bi rnn model | 2|
+recurrent neural network language model | 2|
+bidirectional rnn | 2|
+bidirectional recurrent neural network | 3|
+recurrent networks | 3|
+hierarchical recurrent neural network | 3|
+bidirectional recurrent neural networks | 2|
+Cluster name: || graph neural networks
+graph neural networks | 12|
+graph neural network | 2|
+gcn) | 3|
+gcn | 2|
+gnns | 2|
+graph convolutional networks | 5|
+graph convolutional network | 4|
+graph convolution networks | 2|
+Cluster name: || siamese convolutional neural network
+siamese convolutional neural network | 2|
+Cluster name: || siamese neural network
+siamese neural networks | 3|
+Cluster name: || shallow neural networks
+shallow neural networks | 2|
+Cluster name: ||language technology
+language technology | 50|
+human language technologies | 15|
+human language technology | 12|
+speech and language technologies | 8|
+language technology tools | 7|
+language technologies | 51|
+language and speech technology | 4|
+Cluster name: ||assistants
+voice assistants | 2|
+assistants | 2|
+virtual assistants | 1|
+Cluster name: ||lstm
+lstm | 42|
+bilstm | 33|
+bidirectional lstm | 6|
+lstms | 18|
+bi lstm | 8|
+lstm) | 8|
+bilstm crf | 8|
+lstm models | 4|
+long short term memory (lstm) networks | 4|
+bidirectional lstms | 3|
+lstm based model | 3|
+lstm crf | 3|
+bi lstm model | 2|
+lstm classifier | 2|
+bilstm model | 4|
+lstm model | 11|
+bi directional lstms | 2|
+lstm encoder decoder model | 2|
+lstm crf model | 2|
+1d conv lstm | 2|
+cnn lstm | 4|
+lstm based models | 2|
+bidirectional lstm network | 2|
+bi directional lstm | 5|
+bilstm) | 2|
+long short term memory recurrent neural network | 2|
+long short term memory | 20|
+bidirectional long short term memory | 4|
+bidirectional long short term memory networks | 2|
+long short term memory network | 2|
+Cluster name: ||tf idf 
+tf idf | 16|
+tf idf character n grams | 2|
+tf idf char n grams | 2|
+tf idf scheme | 2|
+tf idf features | 3|
+Cluster name: ||conditional random field
+crf | 40|
+crf models | 5|
+crf) | 3|
+crf classifiers | 2|
+crf layer | 2|
+crf model | 4|
+crfs | 9|
+linear chain crf | 2|
+conditional random field | 12|
+linear chain conditional random fields | 3|
+conditional random fields | 49|
+supervised linear chain conditional random field model | 2|
+Cluster name: ||hidden markov models
+hidden markov models | 8|
+hidden markov model | 10|
+hmm | 4|
+hmms | 2|
+Cluster name: ||transformers
+transformers) | 8|
+transformer based models | 34|
+transformer based model | 14|
+transformer language models | 9|
+transformer based approach | 7|
+transformer architectures | 7|
+transformer based architecture | 7|
+pretrained transformers | 5|
+transformer based architectures | 4|
+transformer | 34|
+transformer model | 28|
+transformer architecture | 21|
+transformer network | 3|
+transformer) | 3|
+bidirectional transformers | 4|
+transformers | 52|
+transformer models | 49|
+transformer based language models | 10|
+transformer networks | 6|
+transformerbased models | 4|
+transformer based approaches | 2|
+vanilla transformer | 2|
+transformer based classification models | 2|
+
+transformer based pre trained models | 2|
+transformer based pretrained models | 2|
+pretrained transformer models | 4|
+multilingual transformer models | 3|
+multilingual transformers | 3|
+multimodal transformer | 2|
+fine tuned transformer based models | 2|
+Cluster name: ||bert
+bert | 267|
+bert model | 21|
+bert based models | 15|
+transformer based bert model | 2|
+bert transformer model | 2|
+bert based model | 6|
+bert based classifier | 6|
+biobert | 20|
+mbert | 19|
+bart | 5|
+bert) | 9|
+m bert | 7|
+multilingual bert model | 7|
+bert's | 7|
+bertweet | 6|
+bert based classifiers | 4|
+arabert | 4|
+bert (bidirectional encoder representations | 3|
+bert classifier | 3|
+bert based approach | 3|
+bert architecture | 3|
+indic bert | 3|
+fine tuning bert | 3|
+fine tuned bert | 3|
+bert based system | 3|
+bert; | 2|
+bertbased models | 2|
+vilbert | 2|
+sapbert | 3|
+electra | 6|
+bio electra | 2|
+al bert | 3|
+pretrained bert model | 2|
+indicbert | 2|
+bluebert | 2|
+clinical bert | 2|
+characterbert | 2|
+clinicalbert | 2|
+ct bert | 3|
+albert model | 3|
+pubmedbert | 3|
+mbert model | 3|
+multilingual bert | 26|
+bert models | 13|
+albert | 9|
+bio bert | 2|
+finetuned bert | 2|
+scibert | 4|
+bert embeddings | 8|
+distilbert | 6|
+Cluster name: ||roberta
+roberta | 43|
+xlmroberta | 1|
+roberta model | 10|
+xlm roberta | 18|
+xlm roberta model | 4|
+xlm r | 16|
+roberta embeddings | 2|
+roberta language model | 2|
+roberta large | 2|
+roberta models | 2|
+roberta transformers | 2|
+Cluster name: ||support vector machine
+kernel methods | 4|
+tree kernels | 3|
+kernels | 1|
+kernel based methods | 3|
+svm (with rbf kernel) | 2|
+svm (rbf kernel) | 2|
+linear kernel | 2|
+tree kernel | 2|
+svm classifier | 12|
+svm | 31|
+svms | 11|
+linear svm | 7|
+svm based system | 3|
+svm classification | 3|
+support vector machine (svm) model | 2|
+support vector machine (svm) classifier | 2|
+svm based classifier | 2|
+svm algorithm | 2|
+libsvm | 2|
+support vector machines | 48|
+support vector machine | 36|
+linear svc | 2|
+Cluster name: ||naive bayes
+naive bayes | 10|
+naive bayes classifier | 5|
+naive bayes classifiers | 3|
+naïve bayes models | 2|
+naïve bayes classifiers | 2|
+multinomial naive bayes | 5|
+mnb classifier | 2|
+naïve bayes | 9|
+naïve bayes classifier | 2|
+Cluster name: ||bayesian model
+bayesian approach | 6|
+bayesian network ensembles | 2|
+bayesian model | 2|
+Cluster name: ||variational autoencoders
+variational autoencoders | 3|
+variational autoencoder | 3|
+vae | 2|
+Cluster name: ||encoderdecoder model
+encoderdecoder framework | 3|
+encoderdecoder model | 1|
+Cluster name: ||text summarization
+text summarization | 6|
+abstractive summarization | 4|
+summarisation | 7|
+summarization | 78|
+extractive summarization | 7|
+multi document summarization | 5|
+summarizer | 5|
+automatic summarization | 5|
+extractive summaries | 4|
+summarization models | 3|
+Cluster name: ||repository system
+repository system | 1|
+fedora commons repository system | 1|
+Cluster name: ||computationally modelling resisting strategies
+modelling persuasion strategies | 1|
+computationally modelling resisting strategies | 1|
+Cluster name: ||uroman
+uroman | 1|
+universal romanization tool | 1|
+Cluster name: ||topic models
+topic modeling | 33|
+topic models | 21|
+Cluster name: ||interactions
+interaction | 1|
+interactions | 1|
+Cluster name: ||sadness
+sad | 1|
+sadness | 1|
+Cluster name: ||distant supervision
+distant supervision | 24|
+weak supervision | 4|
+Cluster name: ||ter
+ter | 1|
+hter | 1|
+Cluster name: ||medical simulators
+medical simulations | 1|
+medical simulators | 1|
+Cluster name: ||neuropsychological examinations
+neuropsychological examinations | 1|
+recorded neuropsychological exams | 1|
+Cluster name: ||services
+service | 2|
+services | 1|
+Cluster name: ||lowresource languages
+low resource languages | 21|
+lowresource languages | 2|
+Cluster name: ||cat tools
+cat tools | 4|
+cat tool | 1|
+Cluster name: ||natural language understanding
+natural language understanding | 36|
+language understanding | 16|
+Cluster name: ||communication
+communication support | 1|
+assistive mobile communication support | 1|
+communications | 6|
+communication | 48|
+Cluster name: ||parser
+parser | 37|
+Cluster name: ||nlp applications
+nlp applications | 37|
+natural language processing applications | 14|
+nlp tools | 36|
+nlp models | 30|
+nlp systems | 25|
+nlp methods | 19|
+nlp task | 13|
+nlp technologies | 15|
+nlp tasks | 102|
+nlp techniques | 30|
+natural language processing tasks | 42|
+natural language processing tools | 16|
+natural language processing methods | 11|
+natural language processing systems | 8|
+natural language processing models | 8|
+natural language processing technologies | 7|
+natural language processing techniques | 26|
+Cluster name: ||machine reading comprehension
+machine reading comprehension | 16|
+reading comprehension | 16|
+Cluster name: ||qs task
+rrs tasks | 1|
+qs task | 1|
+Cluster name: ||knowledge distillation
+knowledge distillation | 16|
+distillation | 5|
+Cluster name: ||morphological analyzer
+morphological analyzer | 16|
+morphological analyser | 6|
+Cluster name: ||biosurveillance capacity
+biosurveillance capacity | 1|
+biosurveillance application ontology | 1|
+Cluster name: ||contextual embeddings
+contextualized embeddings | 8|
+contextual embeddings | 8|
+Cluster name: ||backward maximum match approach
+backward maximum match approach | 1|
+forward maximum match approach | 1|
+Cluster name: ||similarity
+similarity | 7|
+semantic similarity | 4|
+Cluster name: ||vardial
+vardial evaluation campaign | 7|
+vardial | 3|
+Cluster name: ||laz
+laz | 1|
+endangered laz language | 1|
+Cluster name: ||human evaluation
+human evaluation | 5|
+manual evaluation | 1|
+Cluster name: ||dialogue systems
+dialogue systems | 26|
+dialog systems | 8|
+Cluster name: ||backtranslation
+backtranslation | 15|
+iterative backtranslation | 2|
+back translation technique | 2|
+iterative back translation | 4|
+back translation | 32|
+Cluster name: ||vulnerable code detection
+vulnerable code detection | 1|
+clone detection | 1|
+Cluster name: ||gender classification
+gender classification | 8|
+role classification | 1|
+resolving gendered ambiguous pronouns | 2|
+gender identification | 2|
+gender inclusive coreference resolution | 2|
+gendered pronoun resolution | 2|
+gender representation | 3|
+predicting gender | 2|
+gender prediction | 5|
+gender detection | 6|
+Cluster name: ||intimate partner violence prediction
+intimate partner violence | 1|
+intimate partner violence and injury prediction | 1|
+Cluster name: ||learning
+learning framework | 5|
+training framework | 1|
+learning | 41|
+Cluster name: ||depression classification
+ptsd classification | 1|
+depression classification | 1|
+detect depression | 2|
+depression detection task | 2|
+depression classifiers | 2|
+detection of depression | 2|
+identifying depression | 2|
+predicting depression | 2|
+clinical depression | 2|
+depression | 15|
+detecting signs of depression | 11|
+severity of depression | 2|
+depression detection | 8|
+Cluster name: ||policymakers
+policy makers | 3|
+policymakers | 1|
+Cluster name: ||drug adverse effect detection
+drug adverse effect detection | 1|
+drug adverse effect detection task | 1|
+Cluster name: ||interpretlr
+interpretability toolkit | 1|
+interpretlr | 1|
+Cluster name: ||bias
+bias | 15|
+biases | 3|
+Cluster name: ||gru
+gru | 5|
+bigru | 2|
+bi gru | 2|
+gru) | 2|
+grus | 2|
+c bigru | 2|
+gated recurrent neural networks | 2|
+gated recurrent unit | 6|
+gated recurrent neural network | 3|
+gated recurrent units | 2|
+bidirectional gated recurrent unit | 2|
+Cluster name: ||marbert
+marbert | 2|
+arbert | 1|
+Cluster name: ||adversarial training
+adversarial training | 32|
+adversarial learning | 11|
+Cluster name: ||companionable robot
+companionable robot | 1|
+companionable robots | 1|
+Cluster name: ||social media mining 
+social media mining | 29|
+social media mining for health applications | 13|
+Cluster name: ||counselling
+counselling | 3|
+understanding counselling quality | 1|
+Cluster name: ||healthy communication
+personal communications and interactions | 1|
+healthy communication | 1|
+Cluster name: ||apinc
+apinc | 1|
+balapinc | 1|
+Cluster name: ||plms
+lms | 13|
+plms | 11|
+Cluster name: ||dialoguegcn
+dialoguegcn | 1|
+dialogue graph convolutional network | 1|
+Cluster name: ||annotation
+human annotators | 4|
+annotators | 3|
+annotation scheme | 46|
+annotation process | 35|
+annotation schema | 21|
+annotation tool | 18|
+annotation schemes | 14|
+annotations | 8|
+annotation model | 6|
+manual annotation | 21|
+semantic annotation | 13|
+corpus annotation | 10|
+human annotation | 9|
+data annotation | 8|
+annotation tasks | 7|
+annotation | 158|
+annotation task | 16|
+Cluster name: ||context change
+context change | 1|
+accommodating context change | 1|
+Cluster name: ||kristang
+pinchah kristang | 1|
+kristang | 1|
+Cluster name: ||acquisition methodologies
+acquis ition methodologies | 1|
+acquisition methodologies | 1|
+Cluster name: ||ngrams
+character ngrams | 3|
+ngrams | 1|
+Cluster name: ||tree
+dependency trees | 4|
+tree | 1|
+Cluster name: ||dialogue
+dialogue | 19|
+dialog | 1|
+Cluster name: ||qualitative analysis
+qualitative analysis | 11|
+quantitative analysis | 8|
+Cluster name: ||ded tasks
+ded tasks | 1|
+ea task | 1|
+Cluster name: ||glue
+glue | 3|
+superglue | 1|
+Cluster name: ||film age appropriateness classification
+film age appropriateness classification | 1|
+film age appropriateness investigation | 1|
+Cluster name: ||local term weighting
+local term weighting | 1|
+global term weighting | 1|
+Cluster name: ||automatic restoration of punctuation
+comma restoration | 1|
+automatic restoration of punctuation | 1|
+Cluster name: ||dialog generation
+neural dialogue generation | 2|
+dialog generation | 1|
+Cluster name: ||generators and discriminators
+generator and discriminator pairs | 1|
+generators and discriminators | 1|
+Cluster name: ||dialogues
+dialogues | 10|
+dialogs | 1|
+Cluster name: ||biologically inspired algorithms
+biologically inspired approach | 1|
+biologically inspired algorithms | 1|
+Cluster name: ||profession span detection
+profession span detection | 1|
+ade span detection | 1|
+Cluster name: ||treebank
+treebank | 4|
+dependency treebank | 1|
+Cluster name: ||computational linguistics
+computational linguistics | 61|
+linguistics | 35|
+Cluster name: ||sequence labeling problem
+sequence labeling problem | 5|
+sequence tagging problem | 3|
+Cluster name: ||speech translation system
+speech translation system | 2|
+speech translation systems | 1|
+Cluster name: ||information retrieval
+information retrieval system | 4|
+information retrieval | 52|
+retrieval system | 1|
+information retrieval and extraction | 2|
+text mining and information retrieval systems | 2|
+cross language information retrieval | 2|
+information retrieval task | 3|
+biomedical information retrieval | 4|
+cross lingual information retrieval | 5|
+information retrieval and natural language processing lab | 2|
+retrieval | 35|
+information retrieval methods | 4|
+information retrieval techniques | 3|
+ir | 15|
+Cluster name: ||misinformation detection
+misinformation detection | 1|
+misinformation identification | 1|
+Cluster name: ||spoken language processing
+spoken language processing | 2|
+lingua | 1|
+Cluster name: ||knowledge graph
+knowledge graph | 16|
+knowledge graphs | 9|
+Cluster name: ||data augmentation
+data augmentation | 72|
+augmentation | 11|
+Cluster name: ||dialogue system
+dialogue system | 17|
+dialog system | 7|
+Cluster name: ||transla­ tion
+transla­ tion | 1|
+backbone trans­ lation models | 1|
+Cluster name: ||translation service
+translation service | 4|
+translation services | 4|
+Cluster name: ||biomedical bert
+biomedical roberta | 1|
+biomedical bert | 1|
+Cluster name: ||tagger
+tagger | 12|
+Cluster name: ||semeval 2019
+semeval 2021 | 9|
+semeval 2019 | 5|
+Cluster name: ||language models
+language models | 185|
+neural language models | 17|
+language model | 77|
+pretrained language models | 50|
+multilingual language models | 8|
+pre trained language models | 6|
+masked language model | 5|
+pretrained language model | 7|
+masked language models | 8|
+large language models | 8|
+pre trained language model | 3|
+language modeling | 32|
+language modelling | 12|
+masked language modeling | 6|
+Cluster name: ||word embeddings
+word embeddings | 165|
+word embedding | 33|
+glove | 16|
+glove) | 2|
+crosslingual word embeddings | 2|
+contextualized word embedding | 2|
+multilingual word embeddings | 2|
+character and word embeddings | 2|
+word embedding model | 3|
+word embedding representations | 3|
+cross lingual word embeddings | 12|
+pretrained word embeddings | 6|
+contextualized word embeddings | 6|
+vector space model | 6|
+bilingual word embeddings | 4|
+word embedding models | 23|
+word representations | 22|
+embeddings | 22|
+Cluster name: ||fasttext
+fasttext | 15|
+fasttext embeddings | 6|
+fasttext) | 2|
+Cluster name: ||profession classification
+profession classification | 1|
+ade classification | 1|
+Cluster name: ||alignments
+word alignments | 3|
+alignments | 1|
+Cluster name: ||integer linear programming
+integer linear programming | 2|
+Cluster name: ||discourse sl
+discourse sl | 1|
+discourse and deliberation | 1|
+Cluster name: ||automatic structuring
+automatic structuring | 1|
+automatic structuring of electronic medical records | 1|
+Cluster name: ||bidirectional encoder representations
+bidirectional encoder representations | 19|
+encoder representation | 4|
+Cluster name: ||encoder
+encoder | 17|
+decoder | 12|
+Cluster name: ||ablation studies
+ablation studies | 2|
+ablations | 1|
+Cluster name: ||cbow
+bow | 2|
+cbow | 1|
+Cluster name: ||translators
+translators | 9|
+human translators | 2|
+Cluster name: ||metaphor
+metaphor | 3|
+metaphors | 2|
+Cluster name: ||mental health counseling
+mental health counseling | 1|
+linguistic development of mental health counselors | 1|
+Cluster name: ||natural language generation
+natural language generation tasks | 2|
+text generation tasks | 1|
+language generation models | 2|
+generation model | 5|
+language generation | 7|
+text generation | 20|
+generation | 56|
+natural language generation | 31|
+nlg | 29|
+Cluster name: ||grammar
+grammar | 18|
+grammars | 6|
+Cluster name: ||fact checking
+fact verification | 22|
+factchecking | 3|
+fact checking task | 3|
+fact checking | 67|
+fact checking in community forums | 2|
+computational fact checking | 2|
+fact checking research | 2|
+automatic fact checking | 5|
+fact extraction and verification | 4|
+automatic factchecking | 3|
+identification of fact claiming comments | 2|
+fact verification model | 3|
+fact checking pipeline | 3|
+fact checker | 2|
+fact verification systems | 2|
+fact verification system | 2|
+fact checking systems | 7|
+fact checking system | 4|
+fact checking models | 4|
+manual fact checking | 3|
+human fact checkers | 2|
+manual fact checkers | 2|
+automated fact checking | 11|
+fact verification models | 5|
+fact checkers | 6|
+fact extraction | 14|
+Cluster name: ||claim detection
+fact claiming comments | 2|
+automated claim verification | 2|
+veracity of claims | 2|
+scientific claim verification | 4|
+claim detection | 3|
+claim verification task | 2|
+claim | 2|
+claim verification | 21|
+claim extraction | 2|
+claim generation | 2|
+Cluster name: ||fake news detection
+fake news detection | 44|
+automatic fake news detection | 8|
+detecting fake news | 7|
+fake news | 7|
+automated fake news detection | 2|
+machine generated fake news | 2|
+fake news detection domain | 2|
+dissemination of fake news | 3|
+fake news classification | 3|
+fine grained fake news categorization | 2|
+fine grained fake news detection | 2|
+neural fake news | 2|
+fake news research | 2|
+fake news detection problem | 2|
+fake news challenge | 2|
+false information detection | 2|
+rumour veracity | 2|
+fake news detection models | 2|
+rumour verification models | 2|
+fake news classifier | 2|
+fake news detectors | 3|
+Cluster name: ||toxicity detection
+hate speech | 19|
+multilingual detection of hate speech | 13|
+hate speech classifiers | 8|
+multilingual hate speech detection | 3|
+identifying hate speech | 3|
+online hate speech | 3|
+hate speech detection tasks | 2|
+hate speech identification | 2|
+detection of hate speech | 8|
+detecting hate speech | 16|
+hate speech classification | 9|
+identification of hate speech | 2|
+automatic hate speech detection | 3|
+hate speech detection | 58|
+automated hate speech detection | 2|
+multilingual offensive language identification | 24|
+categorizing offensive language | 7|
+offensive language identification | 58|
+offensive language detection | 42|
+offensive language identification | 58|
+offensive language detection | 42|
+detection of offensive language | 4|
+identification of offensive language | 4|
+detecting offensive language | 4|
+identifying offensive language | 4|
+identifying and categorizing offensive language | 15|
+identifying offensive tweets | 4|
+identifying and categorizing offensive language in social media | 3|
+offensive tweet classification | 3|
+arabic offensive language detection | 3|
+identifying offensive content | 2|
+identifying offensive posts | 2|
+offensive speech identification | 2|
+offensive speech detection | 2|
+offensive language recognition | 2|
+offensive content identification | 2|
+offensive language classification | 2|
+detection of offensive text | 2|
+automatic offensive language identification | 2|
+multilingual offensive language detection | 4|
+arabic offensive language identification | 3|
+detecting harmful memes | 3|
+detecting offensive content | 2|
+abusive language detection | 33|
+offensive language classifiers | 2|
+hate speech detection models | 3|
+hate speech detection systems | 3|
+hate speech classifier | 2|
+toxic language classifiers | 2|
+toxicity prediction | 2|
+toxic comment classification task | 2|
+detecting toxic language | 2|
+detecting toxicity | 2|
+toxic span identification | 2|
+toxic language detection | 3|
+toxicity detectors | 3|
+identification of toxic , engaging , and fact claiming comments | 4|
+detecting toxic spans | 5|
+toxic spans detection task | 5|
+toxicity detection | 8|
+toxic span detection | 10|
+toxic spans detection | 28|
+toxic speech detection | 3|
+toxicity | 3|
+toxic comment classification | 3|
+Cluster name: ||information extraction
+information extraction | 87|
+Cluster name: ||named entity recognition
+ner | 76|
+ner task | 5|
+ner) | 5|
+named entity recognition | 168|
+biomedical ner | 4|
+discontinuous ner | 2|
+cross lingual ner | 2|
+recognizing biomedical entities | 2|
+cross lingual named entity recognition | 3|
+named entity taggers | 3|
+entity detection | 2|
+low resource named entity recognition | 3|
+entity linking approach | 2|
+entity linking models | 2|
+end to end biomedical entity linking | 2|
+entity discovery | 2|
+entity typing | 2|
+entity disambiguation | 2|
+entity embeddings | 2|
+entity representations | 2|
+entity retrieval | 2|
+entity recognition) | 2|
+entity classification | 2|
+entity linking) | 2|
+entity linking task | 2|
+entity representation | 2|
+entity linking | 24|
+named entity recognition task | 5|
+named entity disambiguation | 3|
+named entity normalization | 3|
+entity normalization | 6|
+entity recognition | 16|
+clinical named entity recognition | 5|
+biomedical entity recognition | 4|
+entity extraction | 4|
+biomedical entity linking | 6|
+joint entity and relation extraction | 3|
+cross lingual entity linking | 3|
+medical entity linking | 3|
+entity identification | 3|
+chemical named entity recognition | 2|
+fine grained entity typing | 2|
+low resource cross lingual entity linking | 2|
+named entity recognizer | 6|
+named entity recognition systems | 5|
+named entity recognition system | 6|
+named entity recognizers | 2|
+Cluster name: ||classification
+classification | 212|
+text classification | 70|
+binary classification problem | 4|
+text classification tasks | 16|
+classification task | 35|
+document classification | 12|
+multi class classification | 11|
+classification problem | 12|
+binary classification task | 15|
+binary classification | 21|
+classification models | 25|
+sentence classification | 11|
+classification tasks | 28|
+topic classification | 8|
+classification system | 8|
+text classification methods | 8|
+text classification models | 8|
+supervised classification | 9|
+classification model | 9|
+text classification task | 9|
+classification methods | 9|
+text classifiers | 8|
+classifiers | 133|
+classifier | 126|
+text classification techniques | 3|
+Cluster name: ||question answering
+qa research | 3|
+medvidqa 2022 shared task | 2|
+question answering (qa) system | 3|
+qa | 34|
+qa task | 7|
+qa tasks | 2|
+qa based approach | 2|
+open domain qa | 2|
+vqa | 5|
+iqa | 2|
+mediqa challenge | 4|
+mediqa 2021 | 4|
+biomedical qa | 2|
+cqa | 2|
+question answering | 102|
+factoid question answering | 5|
+question answering task | 5|
+question answering system | 8|
+question answering tasks | 4|
+visual question answering | 7|
+biomedical question answering | 9|
+open domain question answering | 9|
+question answering systems | 9|
+clinical question answering | 4|
+qa models | 2|
+qa systems | 3|
+Cluster name: ||sign language recognition
+continuous signing | 2|
+sign language recognition | 10|
+american sign language | 6|
+continuous sign language recognition | 3|
+automatic sign language processing | 3|
+automatic sign language recognition | 3|
+sign languages | 3|
+sign language processing | 3|
+Cluster name: ||transfer learning
+transfer learning | 113|
+Cluster name: ||automatic speech recognition
+asr | 54|
+asr system | 5|
+asr systems | 3|
+automatic speech recognition | 67|
+automatic speech recognition systems | 4|
+speech recognition systems | 8|
+speech recognition models | 6|
+speech recognition system | 6|
+speech recognition | 36|
+Cluster name: ||machine learning methods
+machine learning algorithms | 46|
+machine learning approaches | 32|
+machine learning approach | 31|
+machine learning methods | 30|
+machine learning | 163|
+machine learning models | 75|
+machine learning techniques | 51|
+machine learning classifiers | 14|
+machine learning systems | 10|
+machine learning system | 7|
+machine learning based approach | 7|
+supervised machine learning algorithms | 6|
+supervised machine learning methods | 6|
+machine learning method | 5|
+machine learning based systems | 5|
+supervised machine learning approach | 5|
+machine learning tools | 5|
+machine learning tasks | 4|
+machine learning algorithm | 4|
+machine learning based method | 4|
+machine learning based approaches | 4|
+machine learning framework | 3|
+machine learning applications | 3|
+machine learning model | 16|
+Cluster name: ||downstream task
+downstream task | 21|
+downstream application | 2|
+downstream models | 3|
+downstream nlp applications | 4|
+downstream nlp tasks | 12|
+downstream applications | 26|
+downstream tasks | 84|
+Cluster name: ||evaluation methods
+evaluation scheme | 3|
+evaluation methodology | 3|
+evaluation methodologies | 3|
+model evaluation | 3|
+evaluation methods | 4|
+evaluation process | 4|
+automatic evaluation | 6|
+evaluation framework | 6|
+evaluation | 77|
+evaluation method | 3|
+Cluster name: ||covid 19
+identifying covid 19 | 2|
+classification of covid 19 | 2|
+identification of informative covid | 3|
+covid | 6|
+identification of informative covid 19 | 8|
+covid 19 pandemic | 17|
+covid 19 | 64|
+Cluster name: ||relation extraction
+medical relation prediction | 4|
+extracting relations | 4|
+relation extraction models | 5|
+relation extraction | 64|
+relation and event extraction | 2|
+relation extraction methods | 2|
+event and relation extraction | 3|
+relation extraction algorithms | 3|
+relation identification | 3|
+relation detection | 3|
+binary relation extraction | 3|
+semantic relation extraction | 3|
+document level relation extraction | 4|
+relationship extraction | 4|
+relation extraction task | 7|
+relation extraction tasks | 7|
+relation classification | 8|
+temporal relation extraction | 10|
+biomedical relation extraction | 11|
+re | 11|
+relation extraction system | 2|
+neural relation extraction | 2|
+cross sentence relation extraction | 2|
+biomedical relation extraction tasks | 2|
+medical relation extraction | 2|
+distantly supervised biomedical relation extraction | 2|
+clinical temporal relation extraction task | 2|
+clinical temporal relation extraction | 2|
+distantly supervised relation extraction | 2|
+Cluster name: ||fine tuning
+fine tuning method | 2|
+fine tuned models | 5|
+finetuning | 13|
+fine tuning process | 2|
+fine tuning approach | 2|
+fine tuning techniques | 3|
+fine tuning stage | 4|
+fine tuned model | 7|
+fine tuning | 62|
+fine tuning strategies | 2|
+fine tuning) | 2|
+Cluster name: ||dependency parsing
+cross lingual dependency parsing | 6|
+dependency parsing | 37|
+dependency parser | 7|
+Cluster name: ||domain adaption
+domain agnostic | 2|
+domain adaptive pretraining | 2|
+domain adaptive learning | 2|
+domain adaption | 2|
+domain adaptation approaches | 2|
+domain adaptation methods | 3|
+domain adaptation method | 3|
+domain transfer | 4|
+unsupervised domain adaptation | 5|
+domain adaptation techniques | 9|
+domain adaptation | 57|
+Cluster name: ||error analysis
+qualitative error analysis | 2|
+fine grained error analysis | 2|
+in depth error analysis | 3|
+error analysis | 56|
+Cluster name: ||multi task learning
+multi task approach | 4|
+multi task learning framework | 8|
+multi task learning models | 5|
+multi task learning paradigm | 3|
+multi task training | 3|
+multi task learning architecture | 3|
+multi task setting | 3|
+multi task | 4|
+multi task learning model | 4|
+multi task framework | 5|
+multi task model | 6|
+multi task learning approach | 11|
+multi task learning | 49|
+multitask learning | 19|
+Cluster name: ||predictions
+predictions | 14|
+prediction model | 10|
+prediction task | 8|
+prediction models | 6|
+model prediction | 6|
+prediction | 49|
+Cluster name: ||educational applications
+educational applications | 14|
+education | 48|
+Cluster name: ||event extraction
+event extraction systems | 5|
+event extraction task | 5|
+genia event extraction | 4|
+biomedical event extraction system | 3|
+turku event extraction system | 3|
+event extraction framework | 2|
+event recognition | 2|
+event annotation | 2|
+event argument extraction | 2|
+event extraction system | 3|
+extracting biomedical events | 3|
+bio molecular event extraction | 3|
+biomolecular event extraction | 4|
+biological event extraction | 5|
+event extraction tasks | 5|
+event detection | 7|
+biomedical event extraction | 21|
+event extraction | 45|
+Cluster name: ||attention
+self attention | 10|
+hierarchical attention networks | 4|
+self attention mechanism | 3|
+attention layers | 3|
+multi head self attention | 3|
+attention) | 3|
+attention model | 3|
+hierarchical attention network | 4|
+attention mechanisms | 16|
+attention | 24|
+attention mechanism | 44|
+Cluster name: ||detection
+detection | 44|
+Cluster name: ||inference
+inference model | 2|
+inference procedure | 2|
+inference problems | 2|
+textual inference | 3|
+natural language inference task | 5|
+natural language inference | 27|
+nli | 22|
+inference | 43|
+inference problem | 2|
+inference algorithm | 2|
+Cluster name: ||logistic regression
+logistic regression baseline | 2|
+logistic regression) | 2|
+logistic regression models | 2|
+logistic regression classifiers | 2|
+logistic regression analysis | 2|
+logistic regression model | 7|
+logistic regression classifier | 6|
+logistic regression | 43|
+Cluster name: ||e commerce
+e commerce websites | 3|
+e commerce platform | 3|
+e commerce scenarios | 3|
+e commerce search | 2|
+e commerce service | 2|
+e commerce applications | 2|
+e commerce platforms | 4|
+e commerce product search | 2|
+e commerce marketplace | 2|
+e commerce customer service | 2|
+e commerce business | 2|
+e commerce domain | 8|
+e commerce | 39|
+Cluster name: ||training
+training | 38|
+Cluster name: ||artificial intelligence
+artificial intelligence applications | 2|
+artificial intelligence | 37|
+ai | 31|
+Cluster name: ||analysis
+analysis | 36|
+Cluster name: ||gender bias mitigation
+reveal changing attitudes towards sexuality and gender | 1|
+reducing gender bias | 4|
+gender bias mitigation | 3|
+detecting gender bias | 2|
+evaluating gender bias | 2|
+quantifying gender bias | 3|
+mitigating gender bias | 6|
+gender bias | 35|
+gender debiasing | 2|
+gender studies | 2|
+gender bias amplification | 2|
+gender discrimination | 2|
+gender neutral modeling | 2|
+Cluster name: ||pretrained models
+pretrained models | 34|
+pretrained model | 12|
+pre trained model | 8|
+pre trained models | 23|
+pretrained multilingual models | 4|
+multilingual pre trained models | 4|
+Cluster name: ||normalization
+normalization | 33|
+Cluster name: ||umls
+unified medical language system | 22|
+umls | 32|
+Cluster name: ||coreference resolution
+resolving coreference | 2|
+coreference resolution tasks | 2|
+event sentence coreference identification | 2|
+coreference resolution task | 3|
+coreference resolution system | 4|
+coreference models | 3|
+coreference resolution systems | 4|
+coreference | 9|
+coreference resolution | 32|
+Cluster name: ||data collection
+vaccination corpus | 2|
+annotated corpus | 2|
+corpus | 2|
+corpus collection | 2|
+collection | 3|
+data collection | 32|
+Cluster name: ||hope speech detection
+multilingual hope speech detection | 2|
+hope speech | 2|
+hope speech detection | 30|
+Cluster name: ||text mining
+text mining | 30|
+Cluster name: ||elmo
+elmo word embeddings | 2|
+bioelmo | 2|
+elmo embeddings | 8|
+elmo | 29|
+Cluster name: ||wordnet
+sentiwordnet | 5|
+wordnets | 3|
+eurowordnet | 2|
+wordnet based approach | 2|
+wordnet | 27|
+Cluster name: ||stance detection
+stance prediction task | 2|
+stance detection task | 2|
+stance | 3|
+stance classification task | 3|
+rumour stance classification | 4|
+stance prediction | 4|
+stance classification | 15|
+stance detection | 27|
+Cluster name: ||healthcare
+healthcare applications | 4|
+health domain | 6|
+healthcare domain | 7|
+health | 12|
+health applications | 23|
+healthcare | 27|
+health care | 10|
+healthcare services | 3|
+Cluster name: ||mental health
+mental health | 26|
+mental health research | 3|
+mental health support | 3|
+Cluster name: ||consumer health questions
+consumer health question answering | 2|
+consumer health question understanding | 2|
+consumer health questions | 2|
+Cluster name: ||public health application
+public health application | 2|
+public health surveillance | 6|
+public health | 15|
+public health domain | 2|
+Cluster name: ||clpsych
+clpsych 2018 shared task | 5|
+clpsych shared task | 2|
+clpsych 2015 shared task | 2|
+clpsych 2016 shared task | 2|
+clpsych 2019 shared task | 4|
+clpsych 2021 shared task | 4|
+Cluster name: ||psycholinguistics
+psycholinguistics | 9|
+psycholinguistic analysis | 2|
+computational linguistics and clinical psychology | 5|
+psychological theory | 3|
+current and future psychological health | 2|
+personality psychology | 2|
+psychological studies | 2|
+psychological processes | 2|
+clinical psychology | 2|
+psychological theories | 3|
+cognitive psychology | 3|
+psychotherapy | 5|
+social psychology | 6|
+psychology | 26|
+predicting psychological health | 2|
+Cluster name: ||psychiatric
+psychiatric disorders | 2|
+psychiatric diagnosis | 2|
+Cluster name: ||active learning
+active learning strategy | 2|
+active learning strategies | 2|
+active learning approach | 2|
+active learning | 23|
+Cluster name: ||ensemble methods
+ensemble based system | 2|
+ensemble of neural networks | 2|
+model ensemble | 3|
+ensemble classifier | 3|
+ensemble methods | 4|
+ensembles | 6|
+ensemble learning | 8|
+ensemble method | 8|
+ensemble | 9|
+ensemble approach | 19|
+ensemble model | 23|
+ensemble architecture | 2|
+Cluster name: ||hybrid approach
+hybrid approach | 24|
+hybrid system | 9|
+Cluster name: ||crowdsourcing
+crowdsourcing approach | 2|
+crowd sourcing | 5|
+crowd annotations | 2|
+crowdsourcing approaches | 2|
+crowdsourcing methods | 2|
+crowdsourcing platforms | 5|
+crowdsourcing platform | 6|
+crowdsourcing | 22|
+Cluster name: ||feature engineering
+semantic feature extraction | 2|
+predictive features | 2|
+feature combinations | 3|
+manual feature engineering | 4|
+feature representations | 6|
+feature representation | 6|
+feature selection | 18|
+feature extraction | 22|
+feature engineering | 21|
+Cluster name: ||supervised learning
+supervised ml methods | 2|
+supervised | 3|
+supervised and semi supervised settings | 3|
+supervised learning setting | 3|
+supervised machine learning models | 3|
+supervised machine learning approaches | 3|
+supervised learning models | 4|
+supervised learning methods | 4|
+supervised baselines | 4|
+supervised machine learning techniques | 4|
+supervised classifiers | 4|
+supervised learning | 22|
+supervised machine learning | 17|
+Cluster name: ||rumor detection
+detecting rumors | 3|
+early rumor detection | 2|
+rumor verification | 3|
+rumor classification | 2|
+rumor stance classification | 2|
+rumor detection models | 2|
+rumor identification | 2|
+automatic rumor detection | 3|
+rumor detection | 21|
+rumor verification task | 2|
+rumors | 2|
+Cluster name: ||search engine
+search engines | 20|
+search engine | 21|
+search | 19|
+Cluster name: ||xlnet
+xlnet model | 2|
+xlnet | 20|
+Cluster name: ||computational models
+computational models | 21|
+computational methods | 20|
+computational approaches | 16|
+Cluster name: ||word2vec
+word2vec embedding | 2|
+word2vec approaches | 2|
+word2vec model | 2|
+word2vec word embeddings | 2|
+word2vec embeddings | 3|
+word2vec | 18|
+Cluster name: ||transliteration
+transliteration) | 2|
+transliterating | 2|
+transliteration | 17|
+Cluster name: ||unsupervised algorithm
+unsupervised clustering | 3|
+unsupervised technique | 3|
+unsupervised systems | 3|
+unsupervised algorithm | 3|
+unsupervised fashion | 4|
+unsupervised model | 4|
+unsupervised learning | 6|
+unsupervised models | 7|
+unsupervised system | 7|
+unsupervised manner | 7|
+unsupervised approaches | 8|
+unsupervised method | 14|
+unsupervised approach | 16|
+unsupervised methods | 17|
+unsupervised setting | 3|
+unsupervised pretraining | 3|
+Cluster name: ||semantic role labelling
+semantic role labelling | 3|
+semantic role labeling | 17|
+Cluster name: ||gpt
+gpt | 2|
+gpt2 | 4|
+gpt 3 | 6|
+gpt 2 | 17|
+gpt 2 language model | 4|
+Cluster name: ||rule based system
+rule based system | 16|
+rule based approach | 16|
+rule based | 15|
+Cluster name: ||zero shot learning
+zero shot | 2|
+zero shot dependency parsing | 2|
+zero shot transfer | 6|
+zero shot transfer learning | 2|
+zero shot transfer setting | 2|
+zero shot learning approach | 2|
+zero shot capabilities | 2|
+zero shot settings | 3|
+zero shot cross lingual transfer | 8|
+zero shot learning | 8|
+zero shot setting | 8|
+Cluster name: ||fairness
+fairness | 10|
+model fairness | 2|
+measuring fairness | 2|
+algorithmic fairness | 4|
+Cluster name: ||multilingual models 
+multilingual models | 28|
+multilingual model | 22|
