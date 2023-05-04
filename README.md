@@ -15,3 +15,27 @@ For reproduction of the models place the "data", "dataset" and "outputs" folders
 3. `pip install -r requirements.txt`
 4. `export base_folder=path_to_the_project`
 5. `export OPENAI_API_KEY=your_gpt3_key`  necessary for GPT-3 models
+
+
+### Use models
+
+Here is an example that runs the models for the 3 NLP4SG tasks using the test set of our NLP4SGPapers dataset.
+```bash
+./pipeline/pipeline.sh
+```
+
+
+
+
+
+### Train models
+
+To reproduce the results presented in the paper follow the instructions for each task
+
+[Task 1: NLP4SG Classification](https://github.com/feradauto/nlp4sg/tree/main/sg_classifier)
+[Task 2: UN SDG Classifier](https://github.com/feradauto/nlp4sg/tree/main/sg_match)
+[Task 3: Task and Method identification](https://github.com/feradauto/nlp4sg/tree/main/sg_information_extraction)
+
+
+
+

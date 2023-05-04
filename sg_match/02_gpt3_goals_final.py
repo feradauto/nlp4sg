@@ -4,7 +4,6 @@ import openai
 import pandas as pd
 import numpy as np
 import argparse
-from transformers import BloomTokenizerFast, BloomModel,BloomForCausalLM
 import torch
 from sklearn.metrics import f1_score
 from sklearn.metrics import classification_report
@@ -95,14 +94,7 @@ def main():
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
     preprompt="There is an NLP paper with the title and abstract:\n"
-    #question="Which of the UN Sustainable Development Goals does this paper directly contribute to? Provide the goal numbers and names."
-    #question="Which of the UN Sustainable Development Goals does this paper directly contribute to? Provide the goal number and name."
-    #question="Which of the UN Sustainable Development Goals does this paper directly contribute to? Provide the goal number(s) and name(s)."
-    #question="Which of the UN Sustainable Development Goals does this paper contribute to? Provide the goal number(s) and name(s)."
-    #question="Which of the UN Sustainable Development Goals does this paper contribute to? Provide the goal numbers and names."
-    #question="Which of the UN Sustainable Development Goals does this paper contribute to? Provide the goal names, numbers and an explanation."
     question="Which of the UN goals does this paper directly contribute to? Provide the goal number and name."
-    #question="Which of the UN goals does this paper directly contribute to? Provide the goal numbers and names."
     df=df.assign(statement=preprompt+df.text+"\n"+question)
 
     for i,d in df.iterrows():
