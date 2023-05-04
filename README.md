@@ -32,8 +32,8 @@ Here is an example that runs the models for the 3 NLP4SG tasks using the test se
 
 To reproduce the results presented in the paper follow the instructions for each task
 
-[Task 1: NLP4SG Classification](https://github.com/feradauto/nlp4sg/tree/main/sg_classifier)
-[Task 2: UN SDG Classifier](https://github.com/feradauto/nlp4sg/tree/main/sg_match)
+[Task 1: NLP4SG Classification](https://github.com/feradauto/nlp4sg/tree/main/sg_classifier)  <br/>
+[Task 2: UN SDG Classifier](https://github.com/feradauto/nlp4sg/tree/main/sg_match)  <br/>
 [Task 3: Task and Method identification](https://github.com/feradauto/nlp4sg/tree/main/sg_information_extraction)
 
 
