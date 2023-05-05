@@ -28,7 +28,7 @@ Here is an example that runs the models for the 3 NLP4SG tasks using the test se
 
 
 
-### Train models
+### Models
 
 To reproduce the results presented in the paper follow the instructions for each task
 
