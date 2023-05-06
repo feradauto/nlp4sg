@@ -100,10 +100,6 @@ def get_zero_shot_classification(df):
     df=df.merge(probas,left_index=True,right_index=True)
     return df
 
-cross-encoder/nli-deberta-v3-base
-typeform/distilbert-base-uncased-mnli
-joeddav/xlm-roberta-large-xnli
-MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli
 
 def get_classifications(df,social_needs):
     df_goals=df.loc[:,['ID','goal1_raw', 'goal2_raw', 'goal3_raw','goal1', 'goal2', 'goal3']].copy()

@@ -1,114 +1,62 @@
+## This script merges the outputs of each tasks and prepares the inputs for the sankey diagram visualization
+## It is a bit convoluted since it achieves the following:
+## 1. Cluster the methods and tasks names to have big categories for better visualization
+## 2. Keep just the most common methods and tasks
+## 3. Order the elements in a nice way
+## The output files are:
+## 1.sankey_no_org.json : The data of relations between goals, tasks and methods
+## 2.order_sankey.json: The priority order of each of them in the visualization
+## 3.names.json: A list of names required for the visualization
+## 4.papers_features.json: The text of the papers to show the second part of the visualization
 import json
 import pandas as pd
 import re
 import numpy as np
+from ast import literal_eval
 
+mapping_sdg={'sdg1': 'No Poverty',
+ 'sdg2': 'Zero Hunger',
+ 'sdg3': 'Good Health and Well-Being',
+ 'sdg4': 'Quality Education',
+ 'sdg5': 'Gender Equality',
+ 'sdg6': 'Clean Water and Sanitation',
+ 'sdg7': 'Affordable and Clean Energy',
+ 'sdg8': 'Decent Work and Economic Growth',
+ 'sdg9': 'Industry, Innovation and Infrastructure',
+ 'sdg10': 'Reduced Inequalities',
+ 'sdg11': 'Sustainable Cities and Communities',
+ 'sdg12': 'Responsible Consumption and Production',
+ 'sdg13': 'Climate Action',
+ 'sdg14': 'Life Below Water',
+ 'sdg15': 'Life on Land',
+ 'sdg16': 'Peace, Justice and Strong Institutions',
+ 'sdg17': 'Partnership for the Goals'
+}
 
-def extract_predictions_gpt3(df):
-    df=df.assign(sdg1=np.where(df['GPT3_response'].str.lower().str.contains("goal 1 |goal 1:|poverty"),1,0))
-    df=df.assign(sdg2=np.where(df['GPT3_response'].str.lower().str.contains("goal 2|hunger"),1,0))
-    df=df.assign(sdg3=np.where(df['GPT3_response'].str.lower().str.contains("goal 3|health"),1,0))
-    df=df.assign(sdg4=np.where(df['GPT3_response'].str.lower().str.contains("goal 4|education"),1,0))
-    df=df.assign(sdg5=np.where(df['GPT3_response'].str.lower().str.contains("goal 5|gender"),1,0))
-    df=df.assign(sdg6=np.where(df['GPT3_response'].str.lower().str.contains("goal 6|clean water"),1,0))
-    df=df.assign(sdg7=np.where(df['GPT3_response'].str.lower().str.contains("goal 7|clean energy"),1,0))
-    df=df.assign(sdg8=np.where(df['GPT3_response'].str.lower().str.contains("goal 8|decent work"),1,0))
-    df=df.assign(sdg9=np.where(df['GPT3_response'].str.lower().str.contains("goal 9|industry|innovation"),1,0))
-    df=df.assign(sdg10=np.where(df['GPT3_response'].str.lower().str.contains("goal 10|inequal"),1,0))
-    df=df.assign(sdg11=np.where(df['GPT3_response'].str.lower().str.contains("goal 11|sustainable cities"),1,0))
-    df=df.assign(sdg12=np.where(df['GPT3_response'].str.lower().str.contains("goal 12|responsible consumption"),1,0))
-    df=df.assign(sdg13=np.where(df['GPT3_response'].str.lower().str.contains("goal 13|climate"),1,0))
-    df=df.assign(sdg14=np.where(df['GPT3_response'].str.lower().str.contains("goal 14|life below water"),1,0))
-    df=df.assign(sdg15=np.where(df['GPT3_response'].str.lower().str.contains("goal 15|life on land"),1,0))
-    df=df.assign(sdg16=np.where(df['GPT3_response'].str.lower().str.contains("goal 16|peace|justice"),1,0))
-    df=df.assign(sdg17=np.where(df['GPT3_response'].str.lower().str.contains("goal 17|partnership"),1,0))
-    return df
+def read_and_merge_files():
+    t2=pd.read_csv("./results_task_2.csv")
+    t3=pd.read_csv("./task_extr_task3.csv")
+    t4=pd.read_csv("./method_extr_task3.csv")
 
-def assign_goals(df_all_goals):
-    df_all_goals.goal1_raw=df_all_goals.goal1_raw.fillna('')
-    df_all_goals.goal2_raw=df_all_goals.goal2_raw.fillna('')
-    df_all_goals.goal3_raw=df_all_goals.goal3_raw.fillna('')
-    df_all_goals=df_all_goals.assign(goal1=np.where(df_all_goals['goal1_raw'].str.lower().str.contains("education"),'Quality Education',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("poverty"),'No Poverty',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("hunger"),'Zero Hunger',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("clean_water"),'Clean Water and Sanitation',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("clean_energy"),'Affordable and Clean Energy',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("life_land"),'Life on Land',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("marine_life"),'Life Below Water',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("health"),'Good Health and Well-Being',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("climate"),'Climate Action',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("peace|privacy|disinformation_and_fake_news|deception|hate"),'Peace, Justice and Strong Institutions',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("social biases|race & identity"),'Reduced Inequalities',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("industry|innovation|research"),'Industry, Innovation and Infrastructure',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("sustainable cities|sustainable_cities"),'Sustainable Cities and Communities',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("gender"),'Gender Equality',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("decent work|decent_work_and_economy"),'Decent Work and Economic Growth',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("partnership"),'Partnership for the Goals',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("responsible_consumption_and_production"),'Responsible Consumption and Production',
-                        np.where(df_all_goals['goal1_raw'].str.lower().str.contains("reduced|social_equality"),'Reduced Inequalities',''
-                              )))))))))))))))))))
+    t2=t2.loc[:,['ID','title','abstract','text','year','sdg1', 'sdg2', 'sdg3', 'sdg4', 'sdg5',
+       'sdg6', 'sdg7', 'sdg8', 'sdg9', 'sdg10', 'sdg11', 'sdg12', 'sdg13',
+       'sdg14', 'sdg15', 'sdg16', 'sdg17']]
 
-    df_all_goals=df_all_goals.assign(goal2=np.where(df_all_goals['goal2_raw'].str.lower().str.contains("education"),'Quality Education',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("poverty"),'No Poverty',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("hunger"),'Zero Hunger',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("clean_water"),'Clean Water and Sanitation',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("clean_energy"),'Affordable and Clean Energy',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("life_land"),'Life on Land',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("marine_life"),'Life Below Water',         
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("health"),'Good Health and Well-Being',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("climate"),'Climate Action',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("peace|privacy|disinformation_and_fake_news|deception|hate"),'Peace, Justice and Strong Institutions',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("social biases|race & identity"),'Reduced Inequalities',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("industry|innovation|research"),'Industry, Innovation and Infrastructure',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("sustainable cities|sustainable_cities"),'Sustainable Cities and Communities',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("gender"),'Gender Equality',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("decent work|decent_work_and_economy"),'Decent Work and Economic Growth',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("partnership"),'Partnership for the Goals',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("responsible_consumption_and_production"),'Responsible Consumption and Production',
-                        np.where(df_all_goals['goal2_raw'].str.lower().str.contains("reduced|social_equality"),'Reduced Inequalities',''
-                              )))))))))))))))))))
+    t3=t3.loc[:,['ID','task']]
+    t4=t4.loc[:,['ID','method']]
+    t3.task = t3.task.apply(literal_eval)
+    t4.method = t4.method.apply(literal_eval)
 
-    df_all_goals=df_all_goals.assign(goal3=np.where(df_all_goals['goal3_raw'].str.lower().str.contains("education"),'Quality Education',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("poverty"),'No Poverty',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("hunger"),'Zero Hunger',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("clean_water"),'Clean Water and Sanitation',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("clean_energy"),'Affordable and Clean Energy',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("life_land"),'Life on Land',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("marine_life"),'Life Below Water',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("health"),'Good Health and Well-Being',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("climate"),'Climate Action',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("peace|privacy|disinformation_and_fake_news|deception|hate"),'Peace, Justice and Strong Institutions',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("social biases|race & identity"),'Reduced Inequalities',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("industry|innovation|research"),'Industry, Innovation and Infrastructure',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("sustainable cities|sustainable_cities"),'Sustainable Cities and Communities',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("gender"),'Gender Equality',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("decent work|decent_work_and_economy"),'Decent Work and Economic Growth',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("partnership"),'Partnership for the Goals',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("responsible_consumption_and_production"),'Responsible Consumption and Production',
-                        np.where(df_all_goals['goal3_raw'].str.lower().str.contains("reduced|social_equality"),'Reduced Inequalities',''
-                              )))))))))))))))))))
-    return df_all_goals
+    df_input=t2.merge(t3,on=['ID']).merge(t4,on=['ID'])
+    return df_input
 
 def extract_tasks_methods(df_labels_task,df_goals):    
-    df_labels_task['Method']=[list([]) for _ in range(df_labels_task.shape[0])]
-    df_labels_task['Task']=[list() for _ in range(df_labels_task.shape[0])]
-
-
-    for i,d in df_labels_task.iterrows():
-        tasks=[]
-        for e in d['task_scirex']:
-            tasks.append(e['top_word'])
-        df_labels_task.at[i,'Task']=tasks
-        methods=[]
-        for e in d['method_scirex']:
-            methods.append(e['top_word'])
-        df_labels_task.at[i,'Method']=methods
-
+    
     df_labels_task=df_labels_task.merge(df_goals,on=['ID'],how='left')
 
-    df_labels_task=df_labels_task.explode('Task').rename(columns={'Task':'tasks'})
+    df_labels_task=df_labels_task.explode('task').rename(columns={'task':'tasks'})
 
-    df_labels_task=df_labels_task.explode('Method').rename(columns={'Method':'methods'})
+    df_labels_task=df_labels_task.explode('method').rename(columns={'method':'methods'})
 
     df_labels_task=df_labels_task.loc[~df_labels_task.tasks.isin(['natural language processing','healthcare','downstream task','inference','predictions','nlp','nlp applications'])]
 
@@ -238,6 +186,7 @@ def merge_social_need_names(social_needs,df_processed_group_filtered):
     df_processed_group_filtered=df_processed_group_filtered.sort_values('order').reset_index(drop=True)
     return df_processed_group_filtered
 
+
 def rename_and_filter(df_processed_group_filtered):
 
     ## sequential
@@ -277,6 +226,33 @@ def rename_and_filter(df_processed_group_filtered):
 
     df_processed_group_filtered=df_processed_group_filtered.assign(tasks=np.where((df_processed_group_filtered.tasks.isin(['word embeddings']))
                                                           ,'embeddings',df_processed_group_filtered.tasks))
+    return df_processed_group_filtered
+
+def get_names_merge(df_processed_group_filtered):
+
+    names_list=list(df_processed_group_filtered.Goal.unique())
+    entry_type=['Goal' for i in range(df_processed_group_filtered.Goal.nunique())]
+
+    names_list.extend(list(df_processed_group_filtered.tasks.unique()))
+    entry_type.extend(['task' for i in range(df_processed_group_filtered.tasks.nunique())])
+
+    names_list.extend(list(df_processed_group_filtered.methods.unique()))
+    entry_type.extend(['method' for i in range(df_processed_group_filtered.methods.nunique())])
+
+    names=pd.DataFrame(list(zip(names_list,entry_type)),columns=['names','types']).reset_index()
+
+    names=names.rename(columns={'index':'id'})
+
+    names_goals=names.loc[names.types=='Goal'].rename(columns={'names':'Goal'})
+    names_tasks=names.loc[names.types=='task'].rename(columns={'names':'tasks'})
+    names_methods=names.loc[names.types=='method'].rename(columns={'names':'methods'})
+    names_goals=names_goals.rename(columns={'id':'id_goal'})
+    names_tasks=names_tasks.rename(columns={'id':'id_tasks'})
+    names_methods=names_methods.rename(columns={'id':'id_methods'})
+
+    df_processed_group_filtered=df_processed_group_filtered.rename(columns={'weight':'value'})
+
+    df_processed_group_filtered=df_processed_group_filtered.merge(names_goals,on=['Goal']).merge(names_tasks,on=['tasks']).merge(names_methods,on=['methods'])
     return df_processed_group_filtered
 
 def order_format(df_sankey):
@@ -346,39 +322,10 @@ def get_names_and_order(df_sankey,tasks_list,goals_list,methods_list):
     order_dict = dict(zip(order_df.name, order_df.order))
     return order_dict,order_df
 
-def get_names_merge(df_processed_group_filtered):
+def get_papers_features(positives,df_labels_task):
+    positives=positives.loc[:,['ID','title','abstract']]
 
-    names_list=list(df_processed_group_filtered.Goal.unique())
-    entry_type=['Goal' for i in range(df_processed_group_filtered.Goal.nunique())]
 
-    names_list.extend(list(df_processed_group_filtered.tasks.unique()))
-    entry_type.extend(['task' for i in range(df_processed_group_filtered.tasks.nunique())])
-
-    names_list.extend(list(df_processed_group_filtered.methods.unique()))
-    entry_type.extend(['method' for i in range(df_processed_group_filtered.methods.nunique())])
-
-    names=pd.DataFrame(list(zip(names_list,entry_type)),columns=['names','types']).reset_index()
-
-    names=names.rename(columns={'index':'id'})
-
-    names_goals=names.loc[names.types=='Goal'].rename(columns={'names':'Goal'})
-    names_tasks=names.loc[names.types=='task'].rename(columns={'names':'tasks'})
-    names_methods=names.loc[names.types=='method'].rename(columns={'names':'methods'})
-    names_goals=names_goals.rename(columns={'id':'id_goal'})
-    names_tasks=names_tasks.rename(columns={'id':'id_tasks'})
-    names_methods=names_methods.rename(columns={'id':'id_methods'})
-
-    df_processed_group_filtered=df_processed_group_filtered.rename(columns={'weight':'value'})
-
-    df_processed_group_filtered=df_processed_group_filtered.merge(names_goals,on=['Goal']).merge(names_tasks,on=['tasks']).merge(names_methods,on=['methods'])
-    return df_processed_group_filtered
-
-def get_papers_features(positives,df_all_goals,df_labels_task):
-    positives=positives.loc[:,['ID','title_clean','abstract_clean']]
-
-    papers_dataset=df_all_goals.loc[:,['ID','title_clean','abstract_clean']]
-    positives=positives.loc[~positives.ID.isin(papers_dataset.ID.unique())]
-    positives=pd.concat([positives,papers_dataset])
     df_labels_task_save=df_labels_task.loc[:,['ID', 'methods', 'tasks', 'Goal',
           'center_task','center_method']]
 
@@ -390,84 +337,32 @@ def get_papers_features(positives,df_all_goals,df_labels_task):
 
     df_labels_task_save=methods_grouped.merge(tasks_grouped,on=['ID'],how='left').merge(goal_grouped,on=['ID'],how='left').merge(positives,on='ID',how='left')
 
-    df_labels_task_save=df_labels_task_save.assign(title_clean=df_labels_task_save.title_clean.replace("-"," ",regex=True).replace("  "," ",regex=True))
-    df_labels_task_save=df_labels_task_save.assign(abstract_clean=df_labels_task_save.abstract_clean.replace("-"," ",regex=True).replace("  "," ",regex=True))
+    df_labels_task_save=df_labels_task_save.assign(title=df_labels_task_save.title.replace("-"," ",regex=True).replace("  "," ",regex=True))
+    df_labels_task_save=df_labels_task_save.assign(abstract=df_labels_task_save.abstract.replace("-"," ",regex=True).replace("  "," ",regex=True))
     return df_labels_task_save
 
-mapping_sdg={'sdg1': 'No Poverty',
- 'sdg2': 'Zero Hunger',
- 'sdg3': 'Good Health and Well-Being',
- 'sdg4': 'Quality Education',
- 'sdg5': 'Gender Equality',
- 'sdg6': 'Clean Water and Sanitation',
- 'sdg7': 'Affordable and Clean Energy',
- 'sdg8': 'Decent Work and Economic Growth',
- 'sdg9': 'Industry, Innovation and Infrastructure',
- 'sdg10': 'Reduced Inequalities',
- 'sdg11': 'Sustainable Cities and Communities',
- 'sdg12': 'Responsible Consumption and Production',
- 'sdg13': 'Climate Action',
- 'sdg14': 'Life Below Water',
- 'sdg15': 'Life on Land',
- 'sdg16': 'Peace, Justice and Strong Institutions',
- 'sdg17': 'Partnership for the Goals'
-}
-
 def main():
-    outputs_path="../outputs/"
     data_path="../data/"
 
-    df_labels_task=pd.read_json(outputs_path+"sg_ie/positives_tasks_methods_clusters_final_f.json")
-    df_task_test=pd.read_json(outputs_path+"sg_ie/test_scirex_tasks_methods_clusters_final_f.json")
-    df_g=pd.read_csv("../sg_match/progress_singular_gpt3.csv")
     social_needs=pd.read_csv(data_path+"others/social_needs.csv")
-    test_set=pd.read_csv(outputs_path+"general/test_set_final.csv")
-    train_set=pd.read_csv(outputs_path+"general/train_set_final.csv")
-    dev_set=pd.read_csv(outputs_path+"general/dev_set_final.csv")
-    positives=pd.read_csv(outputs_path+"sg_ie/positives_ready.csv")
-    ###df_mapping=pd.read_csv(outputs+"words_mapping.csv")
+
     df_mapping=pd.read_csv("../sg_match/clusters.psv",sep='|')
-    df_all_goals=pd.concat([dev_set,train_set,test_set])
-    df_all_goals=df_all_goals.loc[df_all_goals.label==1]
 
-    df_g=df_g.loc[~df_g.ID.isin(df_all_goals.ID.unique())]
+    df_input=read_and_merge_files()
 
-    df_all_goals=assign_goals(df_all_goals)
-
-    df_group=pd.concat([df_all_goals.loc[:,['ID','goal1']],df_all_goals.loc[:,['ID','goal2']].rename(columns={'goal2':'goal1'}),df_all_goals.loc[:,['ID','goal3']].rename(columns={'goal3':'goal1'})])
-
-    df_group=df_group.loc[df_group.goal1!='']
-
-    df_group=df_group.rename(columns={'goal1':'Goal'})
-
-    df_g=extract_predictions_gpt3(df_g)
-
-    df_g=pd.melt(df_g,id_vars=['ID'],value_vars=['sdg1', 'sdg2', 'sdg3', 'sdg4', 'sdg5',
+    df_goals=pd.melt(df_input,id_vars=['ID'],value_vars=['sdg1', 'sdg2', 'sdg3', 'sdg4', 'sdg5',
            'sdg6', 'sdg7', 'sdg8', 'sdg9', 'sdg10', 'sdg11', 'sdg12', 'sdg13',
            'sdg14', 'sdg15', 'sdg16', 'sdg17'],var_name=['sdg'],value_name='sdg_val')
 
-    df_g=df_g.loc[df_g.sdg_val==1]
+    df_goals=df_goals.loc[df_goals.sdg_val==1]
+    df_goals['Goal']=df_goals.sdg.replace(mapping_sdg)
+    df_goals=df_goals.loc[:,['ID','Goal']]
 
-    df_g['Goal']=df_g.sdg.replace(mapping_sdg)
-    df_g=df_g.loc[:,['ID','Goal']]
-
-    df_goals=pd.concat([df_g,df_group])
-
-    df_goals=df_goals.drop_duplicates()
-
-    df_task_test=df_task_test.loc[df_task_test.ID.isin(df_all_goals.ID.unique())]
-
-    df_labels_task=pd.concat([df_labels_task,df_task_test]).reset_index(drop=True)
-
-    df_labels_task=extract_tasks_methods(df_labels_task,df_goals)
+    df_labels_task=extract_tasks_methods(df_input,df_goals)
 
     df_labels_task=map_names(df_mapping,df_labels_task)
 
-    ## restart
-
     df_processed_group=df_labels_task.groupby(['Goal','tasks','methods']).weight.sum().reset_index()
-
-    ## original papers
 
     df_labels_task=common_tasks(df_processed_group,df_labels_task)
 
@@ -477,7 +372,6 @@ def main():
 
     df_processed_group_filtered=merge_social_need_names(social_needs,df_processed_group_filtered)
 
-    ## check this!!!!
 
     df_processed_group_filtered.weight.sum()
 
@@ -505,7 +399,6 @@ def main():
 
     df_sankey=order_format(df_sankey)
 
-
     df_sankey.rename(columns={'value':'weight'}).to_json("sankey_no_org.json",orient="records")
 
     order_dict,order_df=get_names_and_order(df_sankey,tasks_list,goals_list,methods_list)
@@ -515,9 +408,11 @@ def main():
 
     order_df.loc[:,['name','node_type']].to_json("names.json",orient="records")
 
-    df_labels_task_save=get_papers_features(positives,df_all_goals,df_labels_task)
 
+
+    df_labels_task_save=get_papers_features(df_input,df_labels_task)
+    df_labels_task_save=df_labels_task_save.rename(columns={'title':'title_clean','abstract':'abstract_clean'})
     df_labels_task_save.to_json("papers_features.json",orient="records")
-    
+
 if __name__ == '__main__':
     main()

@@ -1,10 +1,20 @@
 ## Example file evaluating model for task 1 using the test set of our NLP4SGPapers dataset
+import argparse
 from datasets import load_dataset
 from transformers import AutoModelForSequenceClassification,AutoTokenizer,pipeline
 import pandas as pd
 
+# function that takes a parameter and yields the dataset loaded from huggingface or from json file
+# if the dataset is not available in huggingface
+def load_data(dataset):
+    print(dataset)
+    if dataset != "feradauto/NLP4SGPapers":
+        return load_dataset("json", data_files={"test": dataset})['test']
+    else:
+        return load_dataset(dataset)['test']
+  
 
-def main():
+def main(args):
 
     dataset = load_dataset("feradauto/NLP4SGPapers")
     tokenizer = AutoTokenizer.from_pretrained("feradauto/scibert_nlp4sg",truncation=True)
@@ -19,7 +29,8 @@ def main():
     )
 
     data=[]
-    for d in dataset['test']:
+    data_all=load_data(args['dataset'])
+    for d in data_all:
         text=""
         if d['title']:
             text+=d["title"]
@@ -33,4 +44,8 @@ def main():
     df.to_csv("results_task_1.csv",index=False)
 
 if __name__ == '__main__':
-    main()
+# parse from arguments the dataset to be used
+    args=argparse.ArgumentParser()
+    args.add_argument("--dataset",type=str,default="feradauto/NLP4SGPapers")
+    args=vars(args.parse_args())
+    main(args)

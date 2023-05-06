@@ -1,3 +1,4 @@
+import argparse
 import time
 import os
 import pandas as pd
@@ -5,11 +6,11 @@ import numpy as np
 import openai
 import time
 openai.api_key = os.getenv("OPENAI_API_KEY")
+from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
 
-def main():
+def predict_gpt3():
     data_path="./"
-    output_path="./"
-    df=pd.read_csv(output_path+"results_task_1.csv")
+    df=pd.read_csv(data_path+"results_task_1.csv")
 
 
     ack_preprompt="""Identify the NLP task(s) that this paper is dealing with. Select a text span that is an appropriate answer, or if no span serves as a good answer, just come up with a phrase. Examples of tasks are: fake news detection, name entity recognition, question answering, etc."""
@@ -17,8 +18,6 @@ def main():
     ack_postprompt="""The primary NLP task addressed in this paper is:"""
 
     df=df.assign(task_prompt_text=ack_preprompt+"\n"+df.text+"\n"+ack_postprompt)
-
-
     for i,d in df.iterrows():
         input_prompt=d['task_prompt_text']
         completion = openai.Completion.create(engine="text-davinci-002", prompt=input_prompt,temperature=0,max_tokens=60,logprobs=1)
@@ -28,8 +27,45 @@ def main():
     df=df.assign(clean_response=df.GPT3_response.replace("\n","",regex=True))
     df['clean_response']=df['clean_response'].str.replace(r'\.$', '')
 
-    df.to_csv(output_path+"task_extr_task3.csv",index=False)
+    return df
+
+def get_zero_shot_prediction(model_name):
+    data_path="./"
+    df=pd.read_csv(data_path+"results_task_1.csv")
+    nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
+
+    for i,d in df.iterrows():
+        QA_input = {
+        'question': "Which NLP task does this paper address?",
+        'context': d['text']
+        }
+        res = nlp(QA_input)
+        df.at[i,'answer']=res['answer']
+
+    df=df.assign(clean_response=df.answer.str.replace(r'\.$', ''))
+    return df
+
+def clean_response(df):
+    df=df.rename(columns={'clean_response':'task'})
+    df.task=df.task.str.lstrip(' ')
+    df.task=df.task.apply(lambda x:[x])
+    return df
+
+
+def main(args):
+    outputs_path="./"
+
+    if args['model']=='openai':
+        df=predict_gpt3()
+    else:
+        df=get_zero_shot_prediction(args['model'])
+    df=clean_response(df)
+    df.to_csv(outputs_path+"task_extr_task3.csv",index=False)
 
 
 if __name__ == '__main__':
-    main()
+    args=argparse.ArgumentParser()
+    ## openai if you want to use GPT 3
+    args.add_argument("--model",type=str,default="bert-large-uncased-whole-word-masking-finetuned-squad")
+    args=vars(args.parse_args())
+    main(args)
