@@ -6,7 +6,8 @@ python $base_folder/pipeline/01_sg_classification.py --dataset "feradauto/NLP4SG
 ## Second step, UN SDG Classification
 ## use "openai" to use GPT Instruct text-davinci-002 and get best results
 ## otherwise use facebook/bart-large-mnli
-python $base_folder/pipeline/02_unsdg_classification.py --model "openai"
+#python $base_folder/pipeline/02_unsdg_classification.py --model "openai"
+python $base_folder/pipeline/02_unsdg_classification.py --model "facebook/bart-large-mnli"
 
 ## Third step, method and task extraction
 ## use "openai" to use GPT Instruct text-davinci-002 and get best results
