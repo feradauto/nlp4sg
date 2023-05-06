@@ -1,13 +1,6 @@
 # Beyond Good Intentions: Reporting the Research Landscape of NLP for Social Good
 
 
-For reproduction of the models place the "data", "dataset" and "outputs" folders in this directory <br/>
-
-"sg_classifier" folder corresponds to the code for the dataset creation and the task <br/>
-"sg_match" folder" corresponds to the code for the models of task 2 <br/>
-"sg_information_extraction" folder corresponds to the code for the models of task 3 <br/>
-
-
 ## General installation instructions
 
 1. `conda create -n nlp4sg python=3.7`
@@ -25,9 +18,6 @@ Here is an example that runs the models for the 3 NLP4SG tasks using the test se
 ```
 
 
-
-
-
 ### More details
 
 You can find more details about the models for each task in the following files:
@@ -36,6 +26,6 @@ You can find more details about the models for each task in the following files:
 [Task 2: UN SDG Classifier](https://github.com/feradauto/nlp4sg/tree/main/sg_match)  <br/>
 [Task 3: Task and Method identification](https://github.com/feradauto/nlp4sg/tree/main/sg_information_extraction) <br/>
 
-This includes the preprocessing of the data, training and evaluation for task 1, and the evaluation of other models for tasks 2 and 3.
+These folders include the preprocessing of the data, training and evaluation for task 1, and the evaluation of other models for tasks 2 and 3.
 
 
