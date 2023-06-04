@@ -3,20 +3,20 @@ import argparse
 from datasets import load_dataset
 from transformers import AutoModelForSequenceClassification,AutoTokenizer,pipeline
 import pandas as pd
-
+import codecs
 # function that takes a parameter and yields the dataset loaded from huggingface or from json file
 # if the dataset is not available in huggingface
 def load_data(dataset):
     print(dataset)
     if dataset != "feradauto/NLP4SGPapers":
-        return load_dataset("json", data_files={"test": dataset})['test']
+        dataset = load_dataset("parquet", data_files={"test": dataset})['test']
+        return dataset
     else:
         return load_dataset(dataset)['test']
   
 
 def main(args):
 
-    dataset = load_dataset("feradauto/NLP4SGPapers")
     tokenizer = AutoTokenizer.from_pretrained("feradauto/scibert_nlp4sg",truncation=True)
     model = AutoModelForSequenceClassification.from_pretrained("feradauto/scibert_nlp4sg")
 
@@ -30,6 +30,11 @@ def main(args):
 
     data=[]
     data_all=load_data(args['dataset'])
+    ## This is to get the id of the paper, as the id is not always called the same
+    if "parquet" in args["dataset"]:
+        id_str='acl_id'
+    else:
+        id_str='ID'
     for d in data_all:
         text=""
         if d['title']:
@@ -38,8 +43,10 @@ def main(args):
             text+=". "+d["abstract"]
         output=classifier(text)
         if output[0]['label']=='NLP4SG':
-            data.append((d['ID'],d['title'],d['abstract'],text,d['year'],output[0]['score']))
+            data.append((d[id_str],d['title'],d['abstract'],text,d['year'],output[0]['score']))
 
+        if len(data)>10:
+            break
     df = pd.DataFrame(data, columns =['ID', 'title', 'abstract','text','year','nlp4sg_score'])
     df.to_csv("results_task_1.csv",index=False)
 
