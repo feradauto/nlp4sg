@@ -342,11 +342,11 @@ def get_papers_features(positives,df_labels_task):
     return df_labels_task_save
 
 def main():
-    data_path="../data/"
+    data_path="./data/"
 
     social_needs=pd.read_csv(data_path+"others/social_needs.csv")
 
-    df_mapping=pd.read_csv("../sg_match/clusters.psv",sep='|')
+    df_mapping=pd.read_csv("./nlp4sg/sg_match/clusters.psv",sep='|')
 
     df_input=read_and_merge_files()
 

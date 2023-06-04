@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
+from nlp4sg.config import CONSTANTS as C
 
 def format_dfs(df,social_needs):
     """format input dataframes
@@ -79,8 +80,8 @@ def get_best_match(df_merged):
     return match_unique
 
 def main():
-    data_path="../../data/"
-    outputs_path="../../outputs/"
+    data_path=C.DATA_DIR
+    outputs_path= C.OUTPUTS_DIR
     df=pd.read_csv(data_path+"papers/anthology.csv")
     social_needs=pd.read_csv(data_path+"others/social_needs.csv")
     df,social_needs=format_dfs(df,social_needs)

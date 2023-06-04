@@ -143,7 +143,7 @@ def get_zero_shot_classification(model):
     
     
     classifier = pipeline("zero-shot-classification",
-                          model=model, device='cpu')
+                          model=model, device=-1)
 
     batch_size = 1 # see how big you can make this number before OOM
     sequences = df['text'].to_list()
