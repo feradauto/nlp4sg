@@ -8,7 +8,6 @@ from transformers import pipeline
 def predict_gpt3():
     data_path="./"
     df=pd.read_csv(data_path+"results_task_1.csv")
-
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
     preprompt="There is an NLP paper with the title and abstract:\n"

@@ -3,7 +3,7 @@ import argparse
 from datasets import load_dataset
 from transformers import AutoModelForSequenceClassification,AutoTokenizer,pipeline
 import pandas as pd
-import codecs
+import csv
 # function that takes a parameter and yields the dataset loaded from huggingface or from json file
 # if the dataset is not available in huggingface
 def load_data(dataset):
@@ -28,27 +28,24 @@ def main(args):
         tokenizer=tokenizer,**tokenizer_kwargs
     )
 
-    data=[]
     data_all=load_data(args['dataset'])
     ## This is to get the id of the paper, as the id is not always called the same
     if "parquet" in args["dataset"]:
         id_str='acl_id'
     else:
         id_str='ID'
-    for d in data_all:
-        text=""
-        if d['title']:
-            text+=d["title"]
-        if d['abstract']:
-            text+=". "+d["abstract"]
-        output=classifier(text)
-        if output[0]['label']=='NLP4SG':
-            data.append((d[id_str],d['title'],d['abstract'],text,d['year'],output[0]['score']))
-
-        if len(data)>10:
-            break
-    df = pd.DataFrame(data, columns =['ID', 'title', 'abstract','text','year','nlp4sg_score'])
-    df.to_csv("results_task_1.csv",index=False)
+    with open("results_task_1.csv", 'w', newline='') as sentiment_file:
+        csv_writer = csv.writer(sentiment_file)
+        csv_writer.writerow(['ID', 'title', 'abstract','text','year','nlp4sg_score'])
+        for d in data_all:
+            text=""
+            if d['title']:
+                text+=d["title"]
+            if d['abstract']:
+                text+=". "+d["abstract"]
+            output=classifier(text)
+            if output[0]['label']=='NLP4SG':
+                csv_writer.writerow([d[id_str],d['title'],d['abstract'],text,d['year'],output[0]['score']])
 
 if __name__ == '__main__':
 # parse from arguments the dataset to be used
