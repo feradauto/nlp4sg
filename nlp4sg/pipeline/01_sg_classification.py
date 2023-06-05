@@ -34,8 +34,8 @@ def main(args):
         id_str='acl_id'
     else:
         id_str='ID'
-    with open("results_task_1.csv", 'w', newline='') as sentiment_file:
-        csv_writer = csv.writer(sentiment_file)
+    with open("results_task_1.csv", 'w', newline='') as file:
+        csv_writer = csv.writer(file)
         csv_writer.writerow(['ID', 'title', 'abstract','text','year','nlp4sg_score'])
         for d in data_all:
             text=""

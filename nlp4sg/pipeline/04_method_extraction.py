@@ -1,68 +1,93 @@
 import argparse
 import time
+import argparse
+import time
 import os
 import pandas as pd
 import numpy as np
 import openai
 import time
-openai.api_key = os.getenv("OPENAI_API_KEY")
+import csv
+from datasets import load_dataset
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
 
+def load_data(dataset):
+    dataset = load_dataset("csv", data_files={"test": dataset})['test']
+    return dataset
 
-def predict_gpt3():
-    data_path="./"
-    df=pd.read_csv(data_path+"results_task_1.csv")
+class MLModel:
+    def __init__(self):
+        pass
+    
+    def predict(self, data):
+        
+        prediction = self.perform_prediction(data)
+        processed_response = self.process_response(prediction)
+        return processed_response
+    
+    def perform_prediction(self, processed_data):
+        raise NotImplementedError
+    def process_response(self, data):
+        raise NotImplementedError
 
+class OpenAIModel(MLModel):
+    def __init__(self,model_version=None):
+        self.model_version = model_version
+        self.preprompt="""Identify the NLP method(s) used in this paper. Select a text span that is an appropriate answer, or if no span serves as a good answer, just come up with a phrase. Separate the methods with commas and don't include NLP tasks. Examples of methods are: BERT, SVM, CNN, etc."""
+        self.question="""The primary NLP method used in this paper is:"""
+        self.OPENAI_API_KEY=os.getenv("OPENAI_API_KEY")
+        self.response_columns=['prompt','response','method']
+    def perform_prediction(self, data):
+        prediction=dict()
+        data=self.preprompt+"\n"+data+"\n"+self.question
+        completion = openai.Completion.create(engine=self.model_version, prompt=data,temperature=0,max_tokens=100,logprobs=1)
+        prediction['response']=completion.choices[0].text
+        prediction['prompt']=data
+        return prediction
+    def process_response(self, predictions):
 
-    ack_preprompt="""Identify the NLP method(s) used in this paper. Select a text span that is an appropriate answer, or if no span serves as a good answer, just come up with a phrase. Separate the methods with commas and don't include NLP tasks. Examples of methods are: BERT, SVM, CNN, etc."""
+        predictions['method']=predictions['response'].replace("\n", "").rstrip(".").lstrip(' ')
+        predictions['method']=predictions['method'].split(',')
+        return predictions
 
-    ack_postprompt="""The primary NLP method used in this paper is:"""
-
-    df=df.assign(task_prompt_text=ack_preprompt+"\n"+df.text+"\n"+ack_postprompt)
-    for i,d in df.iterrows():
-        input_prompt=d['task_prompt_text']
-        completion = openai.Completion.create(engine="text-davinci-002", prompt=input_prompt,temperature=0,max_tokens=60,logprobs=1)
-        df.loc[i,'GPT3_response']=completion.choices[0].text
-        time.sleep(3)
-
-    df=df.assign(clean_response=df.GPT3_response.replace("\n","",regex=True))
-    df['clean_response']=df['clean_response'].str.replace(r'\.$', '')
-
-    return df
-def get_zero_shot_prediction(model_name):
-    data_path="./"
-    df=pd.read_csv(data_path+"results_task_1.csv")
-    nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
-
-    for i,d in df.iterrows():
+class ZeroShotQA(MLModel):
+    def __init__(self,model_version=None):
+        self.model_version = model_version
+        self.qa = pipeline("question-answering",
+                          model=model_version,tokenizer=model_version, device=-1)
+        self.response_columns=['answer','method']
+    def perform_prediction(self, data):
         QA_input = {
-        'question': "Which NLP method(s) does this paper use?",
-        'context': d['text']
+        'question':  "Which NLP method(s) does this paper use?",
+        'context': data
         }
-        res = nlp(QA_input)
-        df.at[i,'answer']=res['answer']
-
-    df=df.assign(clean_response=df.answer.str.replace(r'\.$', ''))
-    return df
-
-def clean_response(df):
-    df=df.rename(columns={'clean_response':'method'})
-    df.method=df.method.str.lstrip(' ')
-    df.method=df.method.apply(lambda x:[x])
-    return df
+        prediction = self.qa(QA_input)
+        return prediction
+    def process_response(self, predictions):
+        predictions['method']=predictions['answer'].replace("\n", "").rstrip(".").lstrip(' ')
+        predictions['method']=predictions['method'].split(',')
+        return predictions
 
 
 def main(args):
-    outputs_path="./"
-
-    if args['model']=='openai':
-        df=predict_gpt3()
+    data=load_data("./results_task_1.csv")
+    if args['model'] in ['text-davinci-002']:
+        model=OpenAIModel(args['model'])
+    elif args['model'] in ['bert-large-uncased-whole-word-masking-finetuned-squad']:
+        model=ZeroShotQA(args['model'])
     else:
-        df=get_zero_shot_prediction(args['model'])
+        model=ZeroShotQA('bert-large-uncased-whole-word-masking-finetuned-squad')
 
-    df=clean_response(df)
-    df.to_csv(outputs_path+"method_extr_task3.csv",index=False)
-
+    with open("method_extr_task3.csv", 'w', newline='') as file:
+        csv_writer = csv.writer(file)
+        cols=['ID', 'title', 'abstract', 'text', 'year', 'nlp4sg_score']
+        csv_writer.writerow(cols+model.response_columns)
+        for d in data:
+            output=model.predict(d['text'])
+            final_output=[d['ID'],d['title'],d['abstract'],d['text'],d['year'],d['nlp4sg_score']]
+            for c in model.response_columns:
+                final_output.append(output[c])
+            csv_writer.writerow(final_output)
 
 if __name__ == '__main__':
     args=argparse.ArgumentParser()
